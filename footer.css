@@ -1,0 +1,165 @@
+ *{ margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}   
+/*================ FOOTER ================*/
+.footer-logo{
+    color:white;
+    margin-bottom:20px;
+}
+.footer-logo i{
+    color:#ff8a00;
+}
+.footer p{
+    color:#bbb;
+    margin-bottom:8px;
+    font-size:14px;
+}  .footer a{
+    color:#adadad;
+    text-decoration:none;
+    transition:.3s;
+}
+.footer a:hover{
+    color:#ff8a00;
+} 
+.footer hr{
+    border-color:#444;
+    margin-top:40px;
+}    .newsletter{
+    background:#1f6fa8;
+    padding:80px 0;
+    text-align:center;
+    color:#fff;
+}
+.newsletter h2{
+    font-weight:bold;
+}
+.newsletter p{
+    width:520px;
+    max-width:100%;
+    margin:15px auto 30px;
+    color:#d8e7f3;
+}
+.subscribe-box{
+    width:650px;
+    max-width:100%;
+    margin:auto;
+    background:#fff;
+    padding:10px;
+    display:flex;
+    border-radius:4px;
+}
+.subscribe-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    padding:12px;
+}
+.subscribe-box button{
+    background:#FA8232;
+    color:#fff;
+    border:none;
+    padding:12px 30px;
+}
+.brands{
+    margin-top:45px;
+    display:flex;
+    justify-content:center;
+    gap:45px;
+    color:#d8e7f3;
+    font-weight:bold;
+}
+.footer{
+    background:#191C1F;
+    padding:70px 0 20px;
+}.footer h6{
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    margin-bottom:20px;
+     padding-left:35px;
+
+}
+.footer ul{
+    list-style:none;
+    padding:0;
+}
+.footer li{
+    margin-bottom:12px;
+} 
+.footer a:hover{
+    color:#FA8232;
+}
+.store-btn{
+    width:100%;
+    background:#303639;
+    border:none;
+    color:#fff;
+    padding:14px;
+    border-radius:5px;
+    margin-bottom:12px;
+}
+.tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.tags span{
+    display: inline-block;
+    padding: 7px 14px;
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid #4E5560;
+    border-radius: 2px;
+    background: transparent;
+    line-height: 1.2;
+    cursor: pointer;
+    transition: .3s;
+}
+.tags span:hover{
+    background:#6e6c6c2d;
+    border-color:white;
+    color:#fff;
+} 
+.copy{
+    text-align:center;
+    color:#888;
+    margin-top:25px;
+}.footer ul li{
+    position:relative;
+    padding-left:35px;
+}
+.footer ul li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:50%;
+    transform:translateY(-50%);
+    width:0;
+    height:2px;
+    background:#FFD400;
+    transition:.3s;
+}
+.footer ul li a{
+    color:#9CA3AF;
+    transition:.3s;
+}
+.footer ul li:hover a{
+    color:#FFD400;
+}
+.footer ul li:hover::before{
+    width:24px;
+} 
+.footer h4{
+    color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 15px;
+}.browse a{
+    color:#FFD400 !important;
+    font-weight:bold;
+}
