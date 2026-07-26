@@ -16,11 +16,7 @@ body{
     color:#bbb;
     margin-bottom:8px;
     font-size:14px;
-}  .footer a{
-    color:#adadad;
-    text-decoration:none;
-    transition:.3s;
-} 
+}  
 .footer hr{
     border-color:#444;
     margin-top:40px;
