@@ -41,3 +41,11 @@ categoryBtn.onclick = function(e){
 document.addEventListener("click",function(){
     megaMenu.classList.remove("show");
 }); 
+
+
+
+const closeBtn = document.querySelector(".close-btn");
+
+closeBtn.addEventListener("click", function () {
+    window.location.href = "https://www.google.com";
+});
