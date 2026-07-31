@@ -1,461 +1,679 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clicon - Checkout</title>
-
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Font Awesome 6 -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="css/checkout.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/checkout.css">
+    
 </head>
 <body>
-
-  <!-- ==================== TOP NAV (BLUE) ==================== -->
-  <div class="top-header-blue text-white py-2 border-bottom border-secondary-subtle fs-7">
+ <section class="top-bar">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <span class="black-btn">Black</span>
+                <span class="text-white">Friday</span>
+            </div>
+            <div class="text-white">
+                UP TO<span class="discount"><strong>59% </strong></span>   OFF
+            </div>
+            <div class="right-side d-flex align-items-center">
+    <button class="shop-btn">
+        SHOP NOW
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+   <button class="close-btn" style="position: relative; left: 80px;">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+            </div>
+        </div>
+    </section>
+<section class="info-bar">
     <div class="container d-flex justify-content-between align-items-center">
-      <span class="opacity-75">Welcome to Clicon online eCommerce store.</span>
-      <div class="d-flex align-items-center gap-3">
-        <div class="d-flex align-items-center gap-2 opacity-75">
-          <span>Follow us:</span>
-          <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
-          <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
-          <a href="#" class="text-white"><i class="fa-brands fa-pinterest-p"></i></a>
-          <a href="#" class="text-white"><i class="fa-brands fa-youtube"></i></a>
-          <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-        <span class="opacity-50">|</span>
-        <div class="dropdown">
-          <button class="btn btn-sm text-white dropdown-toggle p-0 border-0 fs-7" type="button" data-bs-toggle="dropdown">Eng</button>
-          <ul class="dropdown-menu dropdown-menu-end fs-7">
-            <li><a class="dropdown-item" href="#">Eng</a></li>
-          </ul>
-        </div>
-        <div class="dropdown">
-          <button class="btn btn-sm text-white dropdown-toggle p-0 border-0 fs-7" type="button" data-bs-toggle="dropdown">USD</button>
-          <ul class="dropdown-menu dropdown-menu-end fs-7">
-            <li><a class="dropdown-item" href="#">USD</a></li>
-          </ul>
-        </div>
-      </div>
+        <span>Welcome to Clicon online eCommerce store.</span>
+        <div class="follow">
+            <span>Follow us:</span>
+            <i class="fab fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fa-brands fa-reddit-alien"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <div class="line"></div>
+            <div class="dropdown">
+    <div class="drop-btn" id="langBtn">
+        <span>Eng</span>
+        <i class="fa-solid fa-angle-down"></i>
     </div>
-  </div>
-
-  <!-- ==================== MAIN HEADER (BLUE) ==================== -->
-  <header class="main-header-blue py-3">
-    <div class="container">
-      <div class="row align-items-center gy-3">
-        <div class="col-6 col-lg-2">
-          <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold fs-3">
-            <i class="fa-regular fa-circle-dot text-white fs-4"></i> CLICON
-          </a>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeLang('Eng',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/us.png" class="flag">
+                <span>English</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
         </div>
-        <div class="col-12 col-lg-7 order-3 order-lg-2">
-          <div class="input-group search-bar-main">
-            <input type="text" id="topSearchInput" class="form-control border-0 py-2 ps-3" placeholder="Search for anything...">
-            <button class="btn btn-white text-dark bg-white border-0 px-3" type="button" id="topSearchBtn">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </button>
-          </div>
+        <div class="drop-item" onclick="changeLang('Man',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/cn.png" class="flag">
+                <span>Mandarin</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
         </div>
-        <div class="col-6 col-lg-3 order-2 order-lg-3 text-end">
-          <div class="d-flex justify-content-end align-items-center gap-3 text-white fs-5">
-            <a href="cart.html" class="text-white position-relative">
-    <i class="fa-solid fa-cart-shopping"></i>
-    <span class="badge bg-white text-primary rounded-circle position-absolute top-0 start-100 translate-middle badge-sm fs-8">2</span>
+        <div class="drop-item" onclick="changeLang('Rus',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/ru.png" class="flag">
+                <span>Russian</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+<div class="dropdown">
+    <div class="drop-btn" id="currencyBtn">
+        <span>USD</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeCurrency('USD',this)">
+            <span> Dollar (USD)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeCurrency('EUR',this)">
+            <span>Euro (EUR)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+</section> 
+    <header>
+        <div class="container">
+            <div class="row align-items-center py-3"> 
+                <div class="col-lg-2">
+                    <h3 class="logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+                </div> 
+                <div class="col-lg-7">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for anything...">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-end">
+    <a href="shopping.html">
+        <i class="fa-solid fa-cart-shopping icon"></i>
+    </a>
+    <a href=""> 
+    <i class="fa-regular fa-heart icon"></i>
 </a>
-            <a href="wishlist.html" class="text-white position-relative">
-              <i class="fa-regular fa-heart"></i>
-              <span class="badge bg-danger text-white rounded-circle position-absolute top-0 start-100 translate-middle badge-sm fs-8" id="wishlistCount" style="display: none;">0</span>
-            </a>
-            <a href="#" class="text-white"><i class="fa-regular fa-user"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
+<a href="../NTI-final-project/Authentication/login/auth.html"> 
+    <i class="fa-regular fa-user icon"></i>
+    </a>
+</div>
 
-  <!-- ==================== SECONDARY NAV (WHITE) ==================== -->
-  <nav class="border-bottom bg-white d-none d-lg-block py-2">
-    <div class="container d-flex justify-content-between align-items-center fs-7">
-      <div class="d-flex align-items-center gap-4">
-        <div class="dropdown">
-          <button class="btn btn-light bg-light-subtle rounded-1 py-2 px-3 fw-semibold dropdown-toggle fs-7" type="button" data-bs-toggle="dropdown">
-            All Category
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="index.html">Electronics Devices (All)</a></li>
-            <li><a class="dropdown-item" href="index.html">Computer & Laptop</a></li>
-            <li><a class="dropdown-item" href="index.html">SmartPhone</a></li>
-            <li><a class="dropdown-item" href="index.html">Headphone</a></li>
-            <li><a class="dropdown-item" href="index.html">Watchs & Accessories</a></li>
-            <li><a class="dropdown-item" href="index.html">TV & Homes Appliances</a></li>
-          </ul>
+            </div>
         </div>
-        <a href="track-order.html" class="text-secondary text-decoration-none"><i class="fa-solid fa-location-dot me-1"></i> Track Order</a>
-        <a href="#" class="text-secondary text-decoration-none"><i class="fa-solid fa-repeat me-1"></i> Compare</a>
-        <a href="#" class="text-secondary text-decoration-none"><i class="fa-solid fa-headset me-1"></i> Customer Support</a>
-        <a href="#" class="text-secondary text-decoration-none"><i class="fa-solid fa-circle-info me-1"></i> Need Help</a>
-      </div>
-      <div class="fw-bold text-dark">
-        <i class="fa-solid fa-phone me-1"></i> +1-202-555-0104
-      </div>
-    </div>
-  </nav>
-
-  <!-- ==================== BREADCRUMB ==================== -->
-  <div class="bg-light-gray py-2 border-bottom fs-7">
+    </header> 
+<nav class="menu">
     <div class="container">
-      <div class="d-flex align-items-center gap-2 text-muted">
-        <a href="index.html" class="text-muted text-decoration-none"><i class="fa-solid fa-house me-1"></i>Home</a>
-        <i class="fa-solid fa-angle-right fs-8"></i>
-        <span class="text-brand-blue fw-semibold">Checkout</span>
-      </div>
+        <div class="row align-items-center"> 
+            <div class="col-lg-8">
+                <button class="menu-btn d-lg-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li class="select-box">
+    <button class="category-btn" id="categoryBtn">
+        <span>All Category</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </button>
+    <div class="mega-menu" id="megaMenu">
+        <a href="#">Computer & Laptop</a>
+        <a href="#">Computer Accessories</a>
+       <div class="phone-item">
+    <a href="#" class="phone-link">
+        <span>SmartPhone</span>
+        <i class="fa-solid fa-angle-right phone-arrow"></i>
+    </a>
+    <div class="phone-dropdown">
+        <a href="#">iPhone</a>
+        <a href="#">Samsung</a>
+        <a href="#">Realme</a>
+        <a href="#">Xiaomi</a>
+        <a href="#">Oppo</a>
+        <a href="#">Vivo</a>
     </div>
-  </div>
-
-  <!-- ==================== CHECKOUT SECTION ==================== -->
-  <section class="container my-5">
-    <div class="row g-4">
-      
-      <!-- ===== LEFT COLUMN: Forms ===== -->
-      <div class="col-lg-7">
-        
-        <!-- ===== Billing Information ===== -->
-        <div class="card border-0 shadow-sm p-4 mb-4">
-          <h5 class="fw-bold text-dark mb-3">Billing Information</h5>
-          
-          <form id="checkoutForm">
-            
-            <!-- User name -->
-            <div class="mb-3">
-              <label class="form-label fw-bold text-dark fs-7">User name</label>
-              <input type="text" id="companyName" class="form-control" placeholder="Company Name (Optional)">
-            </div>
-            
-            <!-- First name & Last name -->
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <input type="text" id="firstName" class="form-control" placeholder="First name" required>
-              </div>
-              <div class="col-6">
-                <input type="text" id="lastName" class="form-control" placeholder="Last name" required>
-              </div>
-            </div>
-            
-            <!-- Address -->
-            <div class="mb-3">
-              <label class="form-label fw-bold text-dark fs-7">Address</label>
-              <div class="row g-2">
-                <div class="col-12">
-                  <select id="country" class="form-select" required>
-                    <option value="">Country</option>
-                    <option value="Egypt">Egypt</option>
-                    <option value="USA">USA</option>
-                    <option value="UK">UK</option>
-                    <option value="UAE">UAE</option>
-                    <option value="Saudi Arabia">Saudi Arabia</option>
-                  </select>
-                </div>
-                <div class="col-6">
-                  <select id="region" class="form-select" required>
-                    <option value="">Region/State</option>
-                    <option value="Cairo">Cairo</option>
-                    <option value="Alexandria">Alexandria</option>
-                    <option value="New York">New York</option>
-                    <option value="California">California</option>
-                    <option value="London">London</option>
-                  </select>
-                </div>
-                <div class="col-6">
-                  <select id="city" class="form-select" required>
-                    <option value="">City</option>
-                    <option value="Cairo">Cairo</option>
-                    <option value="Alexandria">Alexandria</option>
-                    <option value="New York">New York</option>
-                    <option value="Los Angeles">Los Angeles</option>
-                    <option value="London">London</option>
-                  </select>
-                </div>
-                <div class="col-12">
-                  <input type="text" id="zipCode" class="form-control" placeholder="Zip Code" required>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Email & Phone -->
-            <div class="row g-2 mb-3">
-              <div class="col-6">
-                <label class="form-label fw-bold text-dark fs-7">Email</label>
-                <input type="email" id="email" class="form-control" placeholder="Email address" required>
-              </div>
-              <div class="col-6">
-                <label class="form-label fw-bold text-dark fs-7">Phone Number</label>
-                <input type="tel" id="phone" class="form-control" placeholder="Phone number" required>
-              </div>
-            </div>
-            
-            <!-- Ship into different address -->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="differentAddress" onchange="toggleShippingAddress()">
-              <label class="form-check-label fw-bold text-dark fs-7" for="differentAddress">
-                Ship into different address
-              </label>
-            </div>
-            
-            <!-- Different Address (hidden) -->
-            <div id="shippingAddressContainer" class="mt-3 d-none">
-              <div class="border p-3 rounded bg-light">
-                <div class="row g-2">
-                  <div class="col-6">
-                    <input type="text" id="shipFirstName" class="form-control" placeholder="First name">
-                  </div>
-                  <div class="col-6">
-                    <input type="text" id="shipLastName" class="form-control" placeholder="Last name">
-                  </div>
-                  <div class="col-12">
-                    <input type="text" id="shipAddress" class="form-control" placeholder="Street address">
-                  </div>
-                  <div class="col-6">
-                    <input type="text" id="shipCity" class="form-control" placeholder="City">
-                  </div>
-                  <div class="col-6">
-                    <input type="text" id="shipZip" class="form-control" placeholder="Zip code">
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-          </form>
-        </div>
-        
-        <!-- ===== Payment Option ===== -->
-        <div class="card border-0 shadow-sm p-4 mb-4">
-          <h5 class="fw-bold text-dark mb-3">Payment Option</h5>
-          
-          <!-- Payment Methods - in a row -->
-          <div class="payment-methods mb-3">
-            <label class="payment-option active" onclick="selectPayment('cod')">
-              <input type="radio" name="payment" value="cod" checked>
-              <span>Cash on Delivery</span>
-            </label>
-            <label class="payment-option" onclick="selectPayment('venmo')">
-              <input type="radio" name="payment" value="venmo">
-              <span>Venmo</span>
-            </label>
-            <label class="payment-option" onclick="selectPayment('paypal')">
-              <input type="radio" name="payment" value="paypal">
-              <span>Paypal</span>
-            </label>
-            <label class="payment-option" onclick="selectPayment('amazon')">
-              <input type="radio" name="payment" value="amazon">
-              <span>Amazon Pay</span>
-            </label>
-            <label class="payment-option" onclick="selectPayment('card')">
-              <input type="radio" name="payment" value="card">
-              <span>Debit/Credit Card</span>
-            </label>
-          </div>
-          
-          <!-- Card Details - Always Visible -->
-          <div id="cardDetails">
-            <div class="row g-3">
-              <!-- Name on Card - full row -->
-              <div class="col-12">
-                <label class="form-label fw-bold text-dark fs-7">Name on Card</label>
-                <input type="text" id="cardName" class="form-control" placeholder="Full name on card">
-              </div>
-              <!-- Card Number - full row -->
-              <div class="col-12">
-                <label class="form-label fw-bold text-dark fs-7">Card Number</label>
-                <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
-              </div>
-              <!-- Expire Date & CVC - side by side -->
-              <div class="col-6">
-                <label class="form-label fw-bold text-dark fs-7">Expire Date</label>
-                <input type="text" id="cardExpire" class="form-control" placeholder="DD/YY" maxlength="5">
-              </div>
-              <div class="col-6">
-                <label class="form-label fw-bold text-dark fs-7">CVC</label>
-                <input type="text" id="cardCvv" class="form-control" placeholder="123" maxlength="4">
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- ===== Additional Information ===== -->
-        <div class="card border-0 shadow-sm p-4">
-          <h5 class="fw-bold text-dark mb-3">Additional Information</h5>
-          <div class="mb-2">
-            <label class="form-label fw-bold text-dark fs-7">Order Notes (Optional)</label>
-            <textarea id="orderNotes" class="form-control" rows="3" 
-                      placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
-          </div>
-        </div>
-        
-      </div>
-      
-      <!-- ===== RIGHT COLUMN: Order Summary ===== -->
-      <div class="col-lg-5">
-        <div class="card border-0 shadow-sm p-4 sticky-checkout">
-          <h5 class="fw-bold text-dark mb-3">Order Summary</h5>
-          
-          <!-- Order Items -->
-          <div id="orderItemsSummary" class="mb-3">
-            <!-- Rendered by JS -->
-          </div>
-          
-          <hr>
-          
-          <!-- Totals -->
-          <div class="totals">
-            <div class="d-flex justify-content-between py-2">
-              <span class="text-muted">Sub-total</span>
-              <span class="fw-bold text-dark" id="checkoutSubtotal">$0.00</span>
-            </div>
-            <div class="d-flex justify-content-between py-2">
-              <span class="text-muted">Shipping</span>
-              <span class="fw-bold text-success" id="checkoutShipping">Free</span>
-            </div>
-            <div class="d-flex justify-content-between py-2">
-              <span class="text-muted">Discount</span>
-              <span class="fw-bold text-danger" id="checkoutDiscount">$0.00</span>
-            </div>
-            <div class="d-flex justify-content-between py-2">
-              <span class="text-muted">Tax</span>
-              <span class="fw-bold text-dark" id="checkoutTax">$0.00</span>
-            </div>
-            <hr>
-            <div class="d-flex justify-content-between py-2">
-              <span class="fw-bold text-dark fs-5">Total</span>
-              <span class="fw-bold text-brand-blue fs-4" id="checkoutTotal">$0.00 USD</span>
-            </div>
-          </div>
-          
-          <!-- Place Order Button -->
-          <button class="btn btn-orange w-100 py-3 fw-bold text-uppercase mt-3" onclick="placeOrder(event)">
-            Place Order
-          </button>
-        </div>
-      </div>
-      
+</div>
+        <a href="#">Headphones</a>
+        <a href="#">Mobile Accessories</a>
+        <a href="#">Gaming Console</a>
+        <a href="#">Camera & Photo</a>
+        <a href="#">TV & Home Appliances</a>
     </div>
-  </section>
-
-  <!-- ==================== TOAST CONTAINER ==================== -->
-  <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
-
-  <!-- ==================== SUCCESS MODAL ==================== -->
-  <div class="modal fade" id="successModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content text-center p-4">
-        <div class="modal-body">
-          <div class="success-icon mb-3">
-            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Success" style="width: 80px;">
-          </div>
-          <h4 class="fw-bold text-dark">Order Placed Successfully! 🎉</h4>
-          <p class="text-muted fs-7">Thank you for your order. We'll send you a confirmation email shortly.</p>
-          <p class="text-muted fs-8">Order ID: <span id="orderIdDisplay" class="fw-bold text-brand-blue">#CL-2024-001</span></p>
-          <div class="d-flex gap-2 justify-content-center flex-wrap mt-3">
-            <a href="index.html" class="btn btn-orange">Continue Shopping</a>
-            <a href="track-order.html" class="btn btn-outline-orange">Track Order</a>
-          </div>
+</li>
+                    <li>
+                        <a href="#">
+                            <img src="MapPinLine.png" alt="Track Order">
+                            Track Order
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="ArrowsCounterClockwise.png" alt="  Compare">
+                            Compare
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../NTI-final-project/Authentication/customerSupport/customer.html">
+                            <img src="Headphones.png" alt="customer support">
+                            Customer Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="Info.png" alt=" Need Help">
+                            Need Help
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+             <div class="col-lg-4 text-end">
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +1-202-555-0104
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</nav>
+  
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer-dark text-white-50 pt-5 pb-3 fs-7">
-    <div class="container">
-      <div class="row gy-4 border-bottom border-secondary border-opacity-25 pb-4">
-        <div class="col-lg-3">
-          <a href="#" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold fs-4 mb-3">
-            <i class="fa-regular fa-circle-dot text-warning"></i> CLICON
-          </a>
-          <p class="mb-1 text-secondary fs-8">Customer Supports:</p>
-          <h6 class="text-white fw-bold fs-6 mb-2">(629) 555-0129</h6>
-          <p class="mb-1 text-secondary">4517 Washington Ave.</p>
-          <p class="mb-1 text-secondary">Manchester, Kentucky 39495</p>
-          <p class="text-white">info@kinbo.com</p>
-        </div>
-        <div class="col-lg-2">
-          <h6 class="text-white fw-bold mb-3 text-uppercase fs-7">Top Category</h6>
-          <ul class="list-unstyled d-flex flex-column gap-2 text-secondary">
-            <li><a href="index.html" class="text-secondary text-decoration-none">Computer & Laptop</a></li>
-            <li><a href="index.html" class="text-secondary text-decoration-none">SmartPhone</a></li>
-            <li><a href="index.html" class="text-secondary text-decoration-none">Headphone</a></li>
-            <li><a href="index.html" class="text-warning text-decoration-none fw-semibold">— Accessories</a></li>
-            <li><a href="index.html" class="text-secondary text-decoration-none">Camera & Photo</a></li>
-            <li><a href="index.html" class="text-secondary text-decoration-none">TV & Homes</a></li>
-            <li><a href="index.html" class="text-warning text-decoration-none">Browse All Product <i class="fa-solid fa-arrow-right ms-1"></i></a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2">
-          <h6 class="text-white fw-bold mb-3 text-uppercase fs-7">Quick Links</h6>
-          <ul class="list-unstyled d-flex flex-column gap-2 text-secondary">
-            <li><a href="#" class="text-secondary text-decoration-none">Shop Product</a></li>
-            <li><a href="cart.html" class="text-secondary text-decoration-none">Shopping Cart</a></li>
-            <li><a href="wishlist.html" class="text-secondary text-decoration-none">Wishlist</a></li>
-            <li><a href="#" class="text-secondary text-decoration-none">Compare</a></li>
-            <li><a href="track-order.html" class="text-secondary text-decoration-none">Track Order</a></li>
-            <li><a href="#" class="text-secondary text-decoration-none">Customer Help</a></li>
-            <li><a href="#" class="text-secondary text-decoration-none">About Us</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2">
-          <h6 class="text-white fw-bold mb-3 text-uppercase fs-7">Download App</h6>
-          <div class="d-flex flex-column gap-2">
-            <a href="#" class="btn btn-dark-store border border-secondary border-opacity-50 text-start d-flex align-items-center gap-2 p-2 rounded text-decoration-none text-white">
-              <i class="fa-brands fa-google-play fs-4"></i>
-              <div>
-                <div class="fs-8 text-secondary">Get it now</div>
-                <div class="fw-bold fs-7">Google Play</div>
-              </div>
-            </a>
-            <a href="#" class="btn btn-dark-store border border-secondary border-opacity-50 text-start d-flex align-items-center gap-2 p-2 rounded text-decoration-none text-white">
-              <i class="fa-brands fa-apple fs-4"></i>
-              <div>
-                <div class="fs-8 text-secondary">Get it now</div>
-                <div class="fw-bold fs-7">App Store</div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <h6 class="text-white fw-bold mb-3 text-uppercase fs-7">Popular Tag</h6>
-          <div class="d-flex flex-wrap gap-2">
-            <span class="tag-badge-dark cursor-pointer" data-tag="Game">Game</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="iPhone">iPhone</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="TV">TV</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Asus Laptops">Asus Laptops</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Macbook">Macbook</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="SSD">SSD</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Graphics Card">Graphics Card</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Power Bank">Power Bank</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Smart TV">Smart TV</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Speaker">Speaker</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Tablet">Tablet</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Microwave">Microwave</span>
-            <span class="tag-badge-dark cursor-pointer" data-tag="Samsung">Samsung</span>
-          </div>
-        </div>
-      </div>
-      <div class="text-center pt-3 text-secondary fs-8">
-        Kinbo eCommerce Template © 2021. Design by Templatecookie
-      </div>
+<!-- Breadcrumb -->
+
+<div class="breadcrumb-section">
+    <div class="container py-3">
+
+        <i class="bi bi-house-door text-secondary"></i>
+
+        <span class="text-secondary ms-2">Home</span>
+
+        <span class="mx-2 text-secondary">></span>
+
+        <a href="shopping.html" class="text-secondary text-decoration-none">
+    Shopping Card
+</a>
+
+        <span class="mx-2 text-secondary">></span>
+
+        <span class="shopping-text">Checkout</span>
+
     </div>
-  </footer>
+</div>
 
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/products-data.js"></script>
-  <script src="js/checkout.js"></script>
+
+<div class="container py-5">
+
+<div class="row g-4">
+
+<!-- ================= LEFT SIDE ================= -->
+
+<div class="col-lg-8">
+
+<h4 class=" mb-4">
+Billing Information
+</h4>
+<div class="row">
+
+    <div class="col-md-7">
+
+
+
+        <label class="form-label">User Name</label>
+
+        <div class="row">
+
+            <div class="col-6">
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="First name">
+
+                <div class="text-danger small" id="firstNameError"></div>
+
+            </div>
+
+            <div class="col-6">
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Last name">
+
+                <div class="text-danger small" id="lastNameError"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-5">
+
+        <label class="form-label">
+            Company Name
+            <span class="text-secondary">(Optional)</span>
+        </label>
+
+        <input
+            type="text"
+            class="form-control"
+            id="company">
+
+    </div>
+
+</div>
+
+
+<div class="mb-3">
+
+<label class="form-label">
+Address
+</label>
+
+<input
+type="text"
+class="form-control"
+id="address">
+
+<div class="text-danger small" id="addressError"></div>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-3 mb-3">
+
+<label class="form-label">
+Country
+</label>
+
+<select class="form-select" id="country">
+    <option value="">Select...</option>
+    <option value="Egypt">Egypt</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+</select>
+
+
+<div class="text-danger small" id="countryError"></div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+    <label class="form-label">
+        Region / State
+    </label>
+
+    <select class="form-select" id="region">
+
+        <option value="">Select...</option>
+
+    </select>
+
+    <div class="text-danger small" id="regionError"></div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+    <label class="form-label">
+        City
+    </label>
+
+    <select class="form-select" id="city">
+
+        <option value="">Select...</option>
+
+    </select>
+
+    <div class="text-danger small" id="cityError"></div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<label class="form-label">
+Zip Code
+</label>
+
+<input
+type="text"
+class="form-control"
+id="zip">
+
+<div class="text-danger small" id="zipError"></div>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Email
+</label>
+
+<input
+type="email"
+class="form-control"
+id="email">
+
+<div class="text-danger small" id="emailError"></div>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Phone Number
+</label>
+
+<input
+type="text"
+class="form-control"
+id="phone">
+
+<div class="text-danger small" id="phoneError"></div>
+
+</div>
+
+</div>
+
+<div class="form-check mb-5">
+
+<input
+class="form-check-input"
+type="checkbox"
+id="ship">
+
+<label
+class="form-check-label"
+for="ship">
+
+Ship into different address
+
+</label>
+
+</div>
+
+<!-- Payment -->
+
+<div class="border">
+
+    <h5 class="border-bottom fw-bold px-4 py-4 mb-0">
+        Payment Option
+    </h5>
+
+    <div class="row text-center g-0">
+
+        <!-- Cash -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="CurrencyDollar.png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Cash" class="my-2">
+                <div>Cash on Delivery</div>
+            </label>
+        </div>
+
+        <!-- Venmo -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="Icon (2).png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Venmo" class="my-2">
+                <div>Venmo</div>
+            </label>
+        </div>
+
+        <!-- Paypal -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="image 9.png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Paypal" class="my-2">
+                <div>Paypal</div>
+            </label>
+        </div>
+
+        <!-- Amazon -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="Group (1).png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Amazon" class="my-2">
+                <div>Amazon Pay</div>
+            </label>
+        </div>
+
+        <!-- Card -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="CreditCard.png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Card" class="my-2">
+                <div>Debit/Credit Card</div>
+            </label>
+        </div>
+
+    </div>
+<hr  class="m-0">
+    <div class="text-danger small p-2" id="paymentError"></div>
+
+    <div class="p-4">
+
+        <div class="mb-3">
+            <label class="form-label">Name on Card</label>
+            <input type="text" class="form-control" id="cardName">
+            <div class="text-danger small" id="cardNameError"></div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Card Number</label>
+            <input type="text" class="form-control" id="cardNumber">
+            <div class="text-danger small" id="cardNumberError"></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <label class="form-label">Expire Date</label>
+                <input type="text" class="form-control" placeholder="DD/YY" id="expire">
+                <div class="text-danger small" id="expireError"></div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">CVC</label>
+                <input type="text" class="form-control" id="cvc">
+                <div class="text-danger small" id="cvcError"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="mt-5">
+
+<h5 class="mb-3">
+Additional Information
+</h5>
+
+<label class="form-label">
+Order Notes<span class="text-secondary">(optional)</span>
+</label>
+<textarea
+    class="form-control"
+    id="notes"
+    rows="5"
+    placeholder="Notes about your order, e.g. special notes for delivery">
+</textarea>
+
+<div class="mt-4"></div>
+
+</div>
+
+</div>
+
+<!-- ================= RIGHT SIDE ================= -->
+
+<div class="col-lg-4">
+
+<div class="border p-4 order-summary">
+
+<h4 class="mb-4">
+Order Summery
+</h4>
+
+<div id="orderItems">
+
+
+
+</div>
+
+
+<div class="d-flex justify-content-between mb-2 summary-row">
+    <span>Sub-total</span>
+    <span id="subTotal">$0</span>
+</div>
+
+<div class="d-flex justify-content-between mb-2 summary-row">
+    <span>Shipping</span>
+    <span>Free</span>
+</div>
+
+<div class="d-flex justify-content-between mb-2 summary-row">
+    <span>Discount</span>
+    <span id="discount">$0</span>
+</div>
+
+<div class="d-flex justify-content-between mb-3 summary-row">
+    <span>Tax</span>
+    <span id="tax">$0</span>
+</div>
+<hr>
+<div class="d-flex justify-content-between mb-4 summary-total">
+    <span>Total</span>
+    <span id="total">$0</span>
+</div>
+
+<button
+class="btn btn-warning w-100 py-3"
+id="placeOrder">
+
+PLACE ORDER
+<i class="fa-solid fa-arrow-right ms-2"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- ================= Footer ================= -->
+<footer class="footer">
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-3">
+ <h3 class="footer-logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+<p>Customer Supports:</p>
+<h4>(629) 555-0129</h4>
+<p>4517 Washington Ave.</p>
+<p>Manchester, Kentucky 39495</p>
+<p>info@kinbo.com</p>
+</div>
+<div class="col-lg-2">
+<h6>TOP CATEGORY</h6>
+<ul>
+<li><a href="#">Computer & Laptop</a></li>
+<li><a href="#">SmartPhone</a></li>
+<li><a href="#">Headphone</a></li>
+<li><a href="#">Accessories</a></li>
+<li><a href="#">Camera & Photo</a></li>
+<li><a href="#">TV & Homes</a></li>
+<li class="browse">
+<a href="#">
+Browse all product<i class="fa-solid  fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>QUICK LINKS</h6>
+<ul>
+<li><a href="#">Shop Product</a></li>
+<li><a href="#">Shopping Cart</a></li>
+<li><a href="#">Wishlist</a></li>
+<li><a href="#">Compare</a></li>
+<li><a href="#">Track Order</a></li>
+<li><a href="../NTI-final-project/Authentication/customerSupport/customer.html">Customer Help</a></li>
+<li><a href="#">About Us</a></li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>DOWNLOAD APP</h6>
+<button class="store-btn">
+<i class="fa-brands fa-google-play"></i>
+Google Play
+</button>
+<button class="store-btn">
+<i class="fa-brands fa-apple"></i>
+App Store
+</button>
+</div>
+<div class="col-lg-3">
+<h6>POPULAR TAG</h6>
+<div class="tags">
+<span>Game</span>
+<span>iPhone</span>
+<span>TV</span>
+<span>Asus Laptops</span>
+<span>Macbook</span>
+<span>SSD</span>
+<span>Graphics Card</span>
+<span>Power Bank</span>
+<span>Smart TV</span>
+<span>Speaker</span>
+<span>Tablet</span>
+<span>Microwave</span>
+<span>Samsung</span>
+</div>
+</div>
+</div>
+<hr>
+<p class="copy">
+Kinbo eCommerce Template © 2021. Design by Templatecookie
+</p>
+</div>
+</footer>
+
+
+
+<script src="js/checkout.js"></script>
 </body>
 </html>
