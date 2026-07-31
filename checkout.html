@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="checkout.css">
+    
+</head>
+<body>
+ <section class="top-bar">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <span class="black-btn">Black</span>
+                <span class="text-white">Friday</span>
+            </div>
+            <div class="text-white">
+                UP TO<span class="discount"><strong>59% </strong></span>   OFF
+            </div>
+            <div class="right-side d-flex align-items-center">
+    <button class="shop-btn">
+        SHOP NOW
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+   <button class="close-btn" style="position: relative; left: 80px;">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+            </div>
+        </div>
+    </section>
+<section class="info-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <span>Welcome to Clicon online eCommerce store.</span>
+        <div class="follow">
+            <span>Follow us:</span>
+            <i class="fab fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fa-brands fa-reddit-alien"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <div class="line"></div>
+            <div class="dropdown">
+    <div class="drop-btn" id="langBtn">
+        <span>Eng</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeLang('Eng',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/us.png" class="flag">
+                <span>English</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeLang('Man',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/cn.png" class="flag">
+                <span>Mandarin</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeLang('Rus',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/ru.png" class="flag">
+                <span>Russian</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+<div class="dropdown">
+    <div class="drop-btn" id="currencyBtn">
+        <span>USD</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeCurrency('USD',this)">
+            <span> Dollar (USD)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeCurrency('EUR',this)">
+            <span>Euro (EUR)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+</section> 
+    <header>
+        <div class="container">
+            <div class="row align-items-center py-3"> 
+                <div class="col-lg-2">
+                    <h3 class="logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+                </div> 
+                <div class="col-lg-7">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for anything...">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-end">
+    <a href="shopping.html">
+        <i class="fa-solid fa-cart-shopping icon"></i>
+    </a>
+    <a href=""> 
+    <i class="fa-regular fa-heart icon"></i>
+</a>
+<a href="../NTI-final-project/Authentication/login/auth.html"> 
+    <i class="fa-regular fa-user icon"></i>
+    </a>
+</div>
+
+            </div>
+        </div>
+    </header> 
+<nav class="menu">
+    <div class="container">
+        <div class="row align-items-center"> 
+            <div class="col-lg-8">
+                <button class="menu-btn d-lg-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li class="select-box">
+    <button class="category-btn" id="categoryBtn">
+        <span>All Category</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </button>
+    <div class="mega-menu" id="megaMenu">
+        <a href="#">Computer & Laptop</a>
+        <a href="#">Computer Accessories</a>
+       <div class="phone-item">
+    <a href="#" class="phone-link">
+        <span>SmartPhone</span>
+        <i class="fa-solid fa-angle-right phone-arrow"></i>
+    </a>
+    <div class="phone-dropdown">
+        <a href="#">iPhone</a>
+        <a href="#">Samsung</a>
+        <a href="#">Realme</a>
+        <a href="#">Xiaomi</a>
+        <a href="#">Oppo</a>
+        <a href="#">Vivo</a>
+    </div>
+</div>
+        <a href="#">Headphones</a>
+        <a href="#">Mobile Accessories</a>
+        <a href="#">Gaming Console</a>
+        <a href="#">Camera & Photo</a>
+        <a href="#">TV & Home Appliances</a>
+    </div>
+</li>
+                    <li>
+                        <a href="#">
+                            <img src="MapPinLine.png" alt="Track Order">
+                            Track Order
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="ArrowsCounterClockwise.png" alt="  Compare">
+                            Compare
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../NTI-final-project/Authentication/customerSupport/customer.html">
+                            <img src="Headphones.png" alt="customer support">
+                            Customer Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="Info.png" alt=" Need Help">
+                            Need Help
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+             <div class="col-lg-4 text-end">
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +1-202-555-0104
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+  
+
+<!-- Breadcrumb -->
+
+<div class="breadcrumb-section">
+    <div class="container py-3">
+
+        <i class="bi bi-house-door text-secondary"></i>
+
+        <span class="text-secondary ms-2">Home</span>
+
+        <span class="mx-2 text-secondary">></span>
+
+        <a href="shopping.html" class="text-secondary text-decoration-none">
+    Shopping Card
+</a>
+
+        <span class="mx-2 text-secondary">></span>
+
+        <span class="shopping-text">Checkout</span>
+
+    </div>
+</div>
+
+
+<div class="container py-5">
+
+<div class="row g-4">
+
+<!-- ================= LEFT SIDE ================= -->
+
+<div class="col-lg-8">
+
+<h4 class=" mb-4">
+Billing Information
+</h4>
+<div class="row">
+
+    <div class="col-md-7">
+
+
+
+        <label class="form-label">User Name</label>
+
+        <div class="row">
+
+            <div class="col-6">
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="firstName"
+                    placeholder="First name">
+
+                <div class="text-danger small" id="firstNameError"></div>
+
+            </div>
+
+            <div class="col-6">
+
+                <input
+                    type="text"
+                    class="form-control"
+                    id="lastName"
+                    placeholder="Last name">
+
+                <div class="text-danger small" id="lastNameError"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-5">
+
+        <label class="form-label">
+            Company Name
+            <span class="text-secondary">(Optional)</span>
+        </label>
+
+        <input
+            type="text"
+            class="form-control"
+            id="company">
+
+    </div>
+
+</div>
+
+
+<div class="mb-3">
+
+<label class="form-label">
+Address
+</label>
+
+<input
+type="text"
+class="form-control"
+id="address">
+
+<div class="text-danger small" id="addressError"></div>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-3 mb-3">
+
+<label class="form-label">
+Country
+</label>
+
+<select class="form-select" id="country">
+    <option value="">Select...</option>
+    <option value="Egypt">Egypt</option>
+    <option value="USA">USA</option>
+    <option value="UK">UK</option>
+</select>
+
+
+<div class="text-danger small" id="countryError"></div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+    <label class="form-label">
+        Region / State
+    </label>
+
+    <select class="form-select" id="region">
+
+        <option value="">Select...</option>
+
+    </select>
+
+    <div class="text-danger small" id="regionError"></div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+    <label class="form-label">
+        City
+    </label>
+
+    <select class="form-select" id="city">
+
+        <option value="">Select...</option>
+
+    </select>
+
+    <div class="text-danger small" id="cityError"></div>
+
+</div>
+
+<div class="col-md-3 mb-3">
+
+<label class="form-label">
+Zip Code
+</label>
+
+<input
+type="text"
+class="form-control"
+id="zip">
+
+<div class="text-danger small" id="zipError"></div>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Email
+</label>
+
+<input
+type="email"
+class="form-control"
+id="email">
+
+<div class="text-danger small" id="emailError"></div>
+
+</div>
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label">
+Phone Number
+</label>
+
+<input
+type="text"
+class="form-control"
+id="phone">
+
+<div class="text-danger small" id="phoneError"></div>
+
+</div>
+
+</div>
+
+<div class="form-check mb-5">
+
+<input
+class="form-check-input"
+type="checkbox"
+id="ship">
+
+<label
+class="form-check-label"
+for="ship">
+
+Ship into different address
+
+</label>
+
+</div>
+
+<!-- Payment -->
+
+<div class="border">
+
+    <h5 class="border-bottom fw-bold px-4 py-4 mb-0">
+        Payment Option
+    </h5>
+
+    <div class="row text-center g-0">
+
+        <!-- Cash -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="CurrencyDollar.png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Cash" class="my-2">
+                <div>Cash on Delivery</div>
+            </label>
+        </div>
+
+        <!-- Venmo -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="Icon (2).png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Venmo" class="my-2">
+                <div>Venmo</div>
+            </label>
+        </div>
+
+        <!-- Paypal -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="image 9.png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Paypal" class="my-2">
+                <div>Paypal</div>
+            </label>
+        </div>
+
+        <!-- Amazon -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="Group (1).png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Amazon" class="my-2">
+                <div>Amazon Pay</div>
+            </label>
+        </div>
+
+        <!-- Card -->
+        <div class="col">
+            <label class="payment-box p-3 d-flex flex-column align-items-center">
+                <img src="CreditCard.png" class="payment-img" alt="">
+                <input type="radio" name="payment" value="Card" class="my-2">
+                <div>Debit/Credit Card</div>
+            </label>
+        </div>
+
+    </div>
+<hr  class="m-0">
+    <div class="text-danger small p-2" id="paymentError"></div>
+
+    <div class="p-4">
+
+        <div class="mb-3">
+            <label class="form-label">Name on Card</label>
+            <input type="text" class="form-control" id="cardName">
+            <div class="text-danger small" id="cardNameError"></div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Card Number</label>
+            <input type="text" class="form-control" id="cardNumber">
+            <div class="text-danger small" id="cardNumberError"></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6">
+                <label class="form-label">Expire Date</label>
+                <input type="text" class="form-control" placeholder="DD/YY" id="expire">
+                <div class="text-danger small" id="expireError"></div>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label">CVC</label>
+                <input type="text" class="form-control" id="cvc">
+                <div class="text-danger small" id="cvcError"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="mt-5">
+
+<h5 class="mb-3">
+Additional Information
+</h5>
+
+<label class="form-label">
+Order Notes<span class="text-secondary">(optional)</span>
+</label>
+<textarea
+    class="form-control"
+    id="notes"
+    rows="5"
+    placeholder="Notes about your order, e.g. special notes for delivery">
+</textarea>
+
+<div class="mt-4"></div>
+
+</div>
+
+</div>
+
+<!-- ================= RIGHT SIDE ================= -->
+
+<div class="col-lg-4">
+
+<div class="border p-4 order-summary">
+
+<h4 class="mb-4">
+Order Summery
+</h4>
+
+<div id="orderItems">
+
+<!-- المنتجات هتيجي من JavaScript -->
+
+</div>
+
+
+<div class="d-flex justify-content-between mb-2 summary-row">
+    <span>Sub-total</span>
+    <span id="subTotal">$0</span>
+</div>
+
+<div class="d-flex justify-content-between mb-2 summary-row">
+    <span>Shipping</span>
+    <span>Free</span>
+</div>
+
+<div class="d-flex justify-content-between mb-2 summary-row">
+    <span>Discount</span>
+    <span id="discount">$0</span>
+</div>
+
+<div class="d-flex justify-content-between mb-3 summary-row">
+    <span>Tax</span>
+    <span id="tax">$0</span>
+</div>
+<hr>
+<div class="d-flex justify-content-between mb-4 summary-total">
+    <span>Total</span>
+    <span id="total">$0</span>
+</div>
+
+<button
+class="btn btn-warning w-100 py-3"
+id="placeOrder">
+
+PLACE ORDER
+<i class="fa-solid fa-arrow-right ms-2"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<!-- ================= Footer ================= -->
+<footer class="footer">
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-3">
+ <h3 class="footer-logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+<p>Customer Supports:</p>
+<h4>(629) 555-0129</h4>
+<p>4517 Washington Ave.</p>
+<p>Manchester, Kentucky 39495</p>
+<p>info@kinbo.com</p>
+</div>
+<div class="col-lg-2">
+<h6>TOP CATEGORY</h6>
+<ul>
+<li><a href="#">Computer & Laptop</a></li>
+<li><a href="#">SmartPhone</a></li>
+<li><a href="#">Headphone</a></li>
+<li><a href="#">Accessories</a></li>
+<li><a href="#">Camera & Photo</a></li>
+<li><a href="#">TV & Homes</a></li>
+<li class="browse">
+<a href="#">
+Browse all product<i class="fa-solid  fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>QUICK LINKS</h6>
+<ul>
+<li><a href="#">Shop Product</a></li>
+<li><a href="#">Shopping Cart</a></li>
+<li><a href="#">Wishlist</a></li>
+<li><a href="#">Compare</a></li>
+<li><a href="#">Track Order</a></li>
+<li><a href="../NTI-final-project/Authentication/customerSupport/customer.html">Customer Help</a></li>
+<li><a href="#">About Us</a></li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>DOWNLOAD APP</h6>
+<button class="store-btn">
+<i class="fa-brands fa-google-play"></i>
+Google Play
+</button>
+<button class="store-btn">
+<i class="fa-brands fa-apple"></i>
+App Store
+</button>
+</div>
+<div class="col-lg-3">
+<h6>POPULAR TAG</h6>
+<div class="tags">
+<span>Game</span>
+<span>iPhone</span>
+<span>TV</span>
+<span>Asus Laptops</span>
+<span>Macbook</span>
+<span>SSD</span>
+<span>Graphics Card</span>
+<span>Power Bank</span>
+<span>Smart TV</span>
+<span>Speaker</span>
+<span>Tablet</span>
+<span>Microwave</span>
+<span>Samsung</span>
+</div>
+</div>
+</div>
+<hr>
+<p class="copy">
+Kinbo eCommerce Template © 2021. Design by Templatecookie
+</p>
+</div>
+</footer>
+
+
+
+<script src="checkout.js"></script>
+</body>
+</html>

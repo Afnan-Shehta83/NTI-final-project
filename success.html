@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="success.css">
+    
+</head>
+<body>
+ <section class="top-bar">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <span class="black-btn">Black</span>
+                <span class="text-white">Friday</span>
+            </div>
+            <div class="text-white">
+                UP TO<span class="discount"><strong>59% </strong></span>   OFF
+            </div>
+            <div class="right-side d-flex align-items-center">
+    <button class="shop-btn">
+        SHOP NOW
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+   <button class="close-btn" style="position: relative; left: 80px;">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+            </div>
+        </div>
+    </section>
+<section class="info-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <span>Welcome to Clicon online eCommerce store.</span>
+        <div class="follow">
+            <span>Follow us:</span>
+            <i class="fab fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fa-brands fa-reddit-alien"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <div class="line"></div>
+            <div class="dropdown">
+    <div class="drop-btn" id="langBtn">
+        <span>Eng</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeLang('Eng',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/us.png" class="flag">
+                <span>English</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeLang('Man',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/cn.png" class="flag">
+                <span>Mandarin</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeLang('Rus',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/ru.png" class="flag">
+                <span>Russian</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+<div class="dropdown">
+    <div class="drop-btn" id="currencyBtn">
+        <span>USD</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeCurrency('USD',this)">
+            <span> Dollar (USD)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeCurrency('EUR',this)">
+            <span>Euro (EUR)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+</section> 
+    <header>
+        <div class="container">
+            <div class="row align-items-center py-3"> 
+                <div class="col-lg-2">
+                    <h3 class="logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+                </div> 
+                <div class="col-lg-7">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for anything...">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-end">
+    <a href="shopping.html">
+        <i class="fa-solid fa-cart-shopping icon"></i>
+    </a>
+    <a href=""> 
+    <i class="fa-regular fa-heart icon"></i>
+</a>
+<a href="../NTI-final-project/Authentication/login/auth.html"> 
+    <i class="fa-regular fa-user icon"></i>
+    </a>
+</div>
+
+            </div>
+        </div>
+    </header> 
+<nav class="menu">
+    <div class="container">
+        <div class="row align-items-center"> 
+            <div class="col-lg-8">
+                <button class="menu-btn d-lg-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li class="select-box">
+    <button class="category-btn" id="categoryBtn">
+        <span>All Category</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </button>
+    <div class="mega-menu" id="megaMenu">
+        <a href="#">Computer & Laptop</a>
+        <a href="#">Computer Accessories</a>
+       <div class="phone-item">
+    <a href="#" class="phone-link">
+        <span>SmartPhone</span>
+        <i class="fa-solid fa-angle-right phone-arrow"></i>
+    </a>
+    <div class="phone-dropdown">
+        <a href="#">iPhone</a>
+        <a href="#">Samsung</a>
+        <a href="#">Realme</a>
+        <a href="#">Xiaomi</a>
+        <a href="#">Oppo</a>
+        <a href="#">Vivo</a>
+    </div>
+</div>
+        <a href="#">Headphones</a>
+        <a href="#">Mobile Accessories</a>
+        <a href="#">Gaming Console</a>
+        <a href="#">Camera & Photo</a>
+        <a href="#">TV & Home Appliances</a>
+    </div>
+</li>
+                    <li>
+                        <a href="#">
+                            <img src="MapPinLine.png" alt="Track Order">
+                            Track Order
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="ArrowsCounterClockwise.png" alt="  Compare">
+                            Compare
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../NTI-final-project/Authentication/customerSupport/customer.html">
+                            <img src="Headphones.png" alt="customer support">
+                            Customer Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="Info.png" alt=" Need Help">
+                            Need Help
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+             <div class="col-lg-4 text-end">
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +1-202-555-0104
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- ================= Breadcrumb ================= -->
+
+<div class="breadcrumb-section">
+    <div class="container py-3">
+
+        <i class="bi bi-house-door text-secondary"></i>
+
+        <span class="text-secondary ms-2">Home</span>
+
+        <span class="mx-2 text-secondary">></span>
+
+        <a href="shopping.html"
+            class="text-secondary text-decoration-none">
+            Shopping Cart
+        </a>
+
+        <span class="mx-2 text-secondary">></span>
+
+        <a href="checkout.html"
+            class="text-secondary text-decoration-none">
+            Checkout
+        </a>
+
+        <span class="mx-2 text-secondary">></span>
+
+        <span class="order-success-text">
+            Order Success
+        </span>
+
+    </div>
+</div>
+
+<!-- ================= Success ================= -->
+
+<section class="success-section">
+
+    <div class="container">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+            <h2>
+                Your order is successfully place
+            </h2>
+
+            <p>
+                Pellentesque sed lectus nec tortor tristique accumsan quis dictum risus.
+                Donec volutpat mollis nulla non facilisis.
+            </p>
+
+            <div class="buttons">
+                <a href="Homepage.html" class="btn dashboard-btn">
+                <i class="fa-solid fa-layer-group me-2"></i>
+                        GO TO DASHBOARD
+                </a>
+
+                <a href="shopping.html"
+                   class="btn order-btn">
+
+                    VIEW ORDER
+                    <i class="fa-solid fa-arrow-right ms-2"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= Footer ================= -->
+
+<footer class="footer">
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-3">
+ <h3 class="footer-logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+<p>Customer Supports:</p>
+<h4>(629) 555-0129</h4>
+<p>4517 Washington Ave.</p>
+<p>Manchester, Kentucky 39495</p>
+<p>info@kinbo.com</p>
+</div>
+<div class="col-lg-2">
+<h6>TOP CATEGORY</h6>
+<ul>
+<li><a href="#">Computer & Laptop</a></li>
+<li><a href="#">SmartPhone</a></li>
+<li><a href="#">Headphone</a></li>
+<li><a href="#">Accessories</a></li>
+<li><a href="#">Camera & Photo</a></li>
+<li><a href="#">TV & Homes</a></li>
+<li class="browse">
+<a href="#">
+Browse all product<i class="fa-solid  fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>QUICK LINKS</h6>
+<ul>
+<li><a href="#">Shop Product</a></li>
+<li><a href="#">Shopping Cart</a></li>
+<li><a href="#">Wishlist</a></li>
+<li><a href="#">Compare</a></li>
+<li><a href="#">Track Order</a></li>
+<li><a href="../NTI-final-project/Authentication/customerSupport/customer.html">Customer Help</a></li>
+<li><a href="#">About Us</a></li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>DOWNLOAD APP</h6>
+<button class="store-btn">
+<i class="fa-brands fa-google-play"></i>
+Google Play
+</button>
+<button class="store-btn">
+<i class="fa-brands fa-apple"></i>
+App Store
+</button>
+</div>
+<div class="col-lg-3">
+<h6>POPULAR TAG</h6>
+<div class="tags">
+<span>Game</span>
+<span>iPhone</span>
+<span>TV</span>
+<span>Asus Laptops</span>
+<span>Macbook</span>
+<span>SSD</span>
+<span>Graphics Card</span>
+<span>Power Bank</span>
+<span>Smart TV</span>
+<span>Speaker</span>
+<span>Tablet</span>
+<span>Microwave</span>
+<span>Samsung</span>
+</div>
+</div>
+</div>
+<hr>
+<p class="copy">
+Kinbo eCommerce Template © 2021. Design by Templatecookie
+</p>
+</div>
+</footer>
+
+
+
+<script src="success.js"></script>
+</body>
+</html>
