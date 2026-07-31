@@ -83,7 +83,8 @@ header{
     padding:15px 0;
     background:white;
     border-bottom:1px solid #e5e5e5;
-}.nav-links{
+}
+.nav-links{
     display:flex;
     align-items:center;
     list-style:none;
@@ -165,7 +166,7 @@ header{
     font-size:15px;
     cursor:pointer;
 }
- .line{
+.line{
     width: 1px;
     height: 40px;
     background-color: rgba(255,255,255,0.25);
@@ -184,10 +185,10 @@ header{
     align-items: center;
     cursor: pointer;
 }  
-        .select-box{
+.select-box{
             position:relative;
             display:inline-block;
-        }
+}
 .category-btn{
     width:170px;
     height:40px;
@@ -359,22 +360,7 @@ header{
     right:60px;
     bottom:35px;
     width:290px;
-}
-.price-circle{
-    position:absolute;
-    top:35px;
-    right:70px;
-    width:90px;
-    height:90px;
-    border-radius:50%;
-    background:#2DA5F3;
-    color:#fff;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:24px;
-    border:5px solid #fff;
-}
+} 
 .slider-dots{
     position:absolute;
     left:60px;
@@ -531,9 +517,6 @@ margin-top:20px;
 
 
 
-
- 
-
 /*======================
       Best Deals
 ======================*/
@@ -618,15 +601,8 @@ margin-top:20px;
     padding:6px 12px;
     font-size:13px;
     font-weight:600;
-}
-.stars{
-    color:#FA8232;
-    font-size:14px;
-}
-.stars span{
-    color:#77878F;
-    margin-left:8px;
-}
+} 
+
 .big-product h5{
     margin:15px 0;
     font-size:18px;
@@ -675,17 +651,11 @@ margin-top:20px;
 .products{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-}
-.product-card{
-    position:relative;
-    padding:15px;
-    border-right:1px solid #eee;
-    border-bottom:1px solid #eee;
-    transition:.3s;
-}
+} 
 .product-card:hover{
     box-shadow:0 8px 18px rgba(0,0,0,.08);
-}.product-card img{
+}
+.product-card img{
     width:100%;
     height:120px;
     object-fit:contain;
@@ -700,16 +670,7 @@ margin-top:20px;
     color:#2DA5F3;
     font-size:18px;
     font-weight:600;
-}
-.badge{
-    position:absolute;
-    top:12px;
-    left:12px;
-    font-size:11px;
-    font-weight:600;
-    padding:4px 8px;
-    border-radius:2px;
-}
+} 
 .discount{
     color:#191C1F;
 }
@@ -747,10 +708,8 @@ margin-top:20px;
 .actions button:first-child{
     background:#FA8232;
     color:#fff;
-}.old-price{
-    display:inline;
-    margin-right:8px;
-}
+} 
+
 .big-product h4{
     display:inline;
 }
@@ -841,7 +800,7 @@ margin-top:20px;
 
 
 
-    .product-card{
+.product-card{
     width:250px;
     border:1px solid #E4E7E9;
     border-radius:2px;
@@ -858,26 +817,21 @@ box-shadow:0 10px 20px rgba(0,0,0,.15);
     object-fit:contain;
     padding:15px;
 }     
-  .stars{
-    color:#FA8232;
-    font-size:13px;
-}
+  
 .reviews{
     color:#77878F;
     margin-left:5px;
     font-size:13px;
-}.product-title{
+}
+.product-title{
     color:#191C1F;
     font-size:15px;
     font-weight:400;
     line-height:22px;
     margin-top:8px;
-}.price{
-    color:#2DA5F3;
-    font-size:17px;
-    font-weight:600;
-    margin-top:10px;
-}.card-body{
+}
+ 
+.card-body{
     padding:15px;
 }
 
@@ -951,9 +905,6 @@ box-shadow:0 10px 20px rgba(0,0,0,.15);
     align-items:center;
     font-weight:bold;
 }
-
-
-
 
 .computer-accessories{
     background:#fff;
@@ -1029,6 +980,7 @@ box-shadow:0 10px 20px rgba(0,0,0,.15);
 /*==========================
           STARS
 ==========================*/
+ 
 .stars{
     color:#FA8232;
     font-size:14px;
@@ -1452,7 +1404,8 @@ box-shadow:0 10px 20px rgba(0,0,0,.15);
 .footer{
     background:#191C1F;
     padding:70px 0 20px;
-}.footer h6{
+}
+.footer h6{
     color:#fff;
     font-size:15px;
     font-weight:bold;
@@ -1533,7 +1486,8 @@ box-shadow:0 10px 20px rgba(0,0,0,.15);
     font-size: 20px;
     font-weight: 600;
     margin: 10px 0 15px;
-}.browse a{
+}
+.browse a{
     color:#FFD400 !important;
     font-weight:bold;
 }
