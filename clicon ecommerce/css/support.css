@@ -1,0 +1,48 @@
+/* Customer Support Page Styling */
+
+.support-hero {
+  background: #F2F4F5;
+  border-bottom: 1px solid #E4E7E9;
+}
+
+.icon-wrapper {
+  width: 64px;
+  height: 64px;
+}
+
+.transition-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.transition-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1) !important;
+}
+
+.btn-orange {
+  background-color: #FA8232;
+  border-color: #FA8232;
+}
+
+.btn-orange:hover {
+  background-color: #de7028;
+  border-color: #de7028;
+}
+
+.fs-7 {
+  font-size: 0.875rem;
+}
+
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #F2F4F5;
+  color: #191C1F !important;
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
