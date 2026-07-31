@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clicon - Shop Grid</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/products-style.css">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/order-success.css">
+  <link rel="stylesheet" href="css/product-detail.css">
+  <link rel="stylesheet" href="css/track-order-details.css">
+  <link rel="stylesheet" href="css/track-order.css">
+  <link rel="stylesheet" href="css/wishlist.css">
+
+
+
+</head>
+
+<body>
+
+  <!-- ==================== TOP NAV (BLUE) ==================== -->
+  <div class="top-header-blue text-white py-2 border-bottom border-secondary-subtle fs-7">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="opacity-75">Welcome to Clicon online eCommerce store.</span>
+      <div class="d-flex align-items-center gap-3">
+        <div class="d-flex align-items-center gap-2 opacity-75">
+          <span>Follow us:</span>
+          <a href="#" class="text-white"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="text-white"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="text-white"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" class="text-white"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" class="text-white"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <span class="opacity-50">|</span>
+        <div class="dropdown">
+          <button class="btn btn-sm text-white dropdown-toggle p-0 border-0 fs-7" type="button"
+            data-bs-toggle="dropdown">Eng</button>
+          <ul class="dropdown-menu dropdown-menu-end fs-7">
+            <li><a class="dropdown-item" href="#">Eng</a></li>
+          </ul>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-sm text-white dropdown-toggle p-0 border-0 fs-7" type="button"
+            data-bs-toggle="dropdown">USD</button>
+          <ul class="dropdown-menu dropdown-menu-end fs-7">
+            <li><a class="dropdown-item" href="#">USD</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN HEADER (BLUE) ==================== -->
+  <header class="main-header-blue py-3">
+    <div class="container">
+      <div class="row align-items-center gy-3">
+        <div class="col-6 col-lg-2">
+          <a href="index.html" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold fs-3">
+            <i class="fa-regular fa-circle-dot text-white fs-4"></i> CLICON
+          </a>
+        </div>
+        <div class="col-12 col-lg-7 order-3 order-lg-2">
+          <div class="input-group search-bar-main">
+            <input type="text" id="topSearchInput" class="form-control border-0 py-2 ps-3"
+              placeholder="Search for anything...">
+            <button class="btn btn-white text-dark bg-white border-0 px-3" type="button" id="topSearchBtn">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 order-2 order-lg-3 text-end">
+          <div class="d-flex justify-content-end align-items-center gap-3 text-white fs-5">
+              <a href="cart.html" class="text-white position-relative text-decoration-none">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span
+        class="badge bg-white text-primary rounded-circle position-absolute top-0 start-100 translate-middle badge-sm fs-8"
+        id="cartCount">0</span>
+</a>
+            <!-- أيقونة الـ Wishlist في الـ Header -->
+<a href="wishlist.html" class="text-white position-relative text-decoration-none">
+  <i class="fa-regular fa-heart"></i>
+  <!-- 👈 أهم سطر: تأكدي إن الـ id ده موجود بالضبط -->
+  <span id="wishlistCount" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark fs-8" style="display: none;">
+    0
+  </span>
+</a>
+            
+            <a href="#" class="text-white"><i class="fa-regular fa-user"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== SECONDARY NAV (WHITE) ==================== -->
+  <nav class="border-bottom bg-white d-none d-lg-block py-2">
+    <div class="container d-flex justify-content-between align-items-center fs-7">
+      <div class="d-flex align-items-center gap-4">
+        <div class="dropdown">
+          <button class="btn btn-light bg-light-subtle rounded-1 py-2 px-3 fw-semibold dropdown-toggle fs-7"
+            type="button" data-bs-toggle="dropdown">
+            All Category
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item category-dropdown-item" data-cat="all" href="#">Electronics Devices (All)</a>
+            </li>
+            <li><a class="dropdown-item category-dropdown-item" data-cat="Computer & Laptop" href="#">Computer &
+                Laptop</a></li>
+            <li><a class="dropdown-item category-dropdown-item" data-cat="SmartPhone" href="#">SmartPhone</a></li>
+            <li><a class="dropdown-item category-dropdown-item" data-cat="Headphone" href="#">Headphone</a></li>
+            <li><a class="dropdown-item category-dropdown-item" data-cat="Watchs & Accessories" href="#">Watchs &
+                Accessories</a></li>
+            <li><a class="dropdown-item category-dropdown-item" data-cat="TV & Homes Appliances" href="#">TV & Homes
+                Appliances</a></li>
+          </ul>
+        </div>
+        <a href="track-order.html" class="text-secondary text-decoration-none"><i
+            class="fa-solid fa-location-dot me-1"></i> Track Order</a>
+
+        <a href="support.html" class="text-secondary text-decoration-none"><i class="fa-solid fa-headset me-1"></i> Customer Support</a>
+        <a href="help.html" class="text-secondary text-decoration-none"><i class="fa-solid fa-circle-info me-1"></i> Need Help</a>
+        
+      </div>
+      <div class="fw-bold text-dark">
+        <i class="fa-solid fa-phone me-1"></i> +1-202-555-0104
+      </div>
+    </div>
+  </nav>
+
+  <!-- ==================== BREADCRUMB ==================== -->
+  <div class="bg-light-gray py-2 border-bottom fs-7">
+    <div class="container">
+      <div class="d-flex align-items-center gap-2 text-muted">
+        <a href="index.html" class="text-muted text-decoration-none"><i class="fa-solid fa-house me-1"></i>Home</a>
+        <i class="fa-solid fa-angle-right fs-8"></i>
+        <span class="text-brand-blue fw-semibold" id="breadcrumbCategory">Electronics Devices</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <div class="container my-4">
+    <div class="row g-4">
+
+      <!-- LEFT SIDEBAR -->
+      <aside class="col-lg-3">
+
+        <!-- Category Filter -->
+        <div class="mb-4 fs-7">
+          <h6 class="fw-bold text-uppercase fs-7 mb-3 text-dark">Category</h6>
+          <div class="d-flex flex-column gap-2 text-secondary" id="categoryRadioContainer">
+            <label class="d-flex align-items-center gap-2 cursor-pointer text-dark fw-bold">
+              <input type="radio" name="cat" value="all" checked class="custom-radio cat-radio"> Electronics Devices
+              (All)
+            </label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="Computer & Laptop" class="custom-radio cat-radio"> Computer & Laptop</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="Computer Accessories" class="custom-radio cat-radio"> Computer Accessories</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="SmartPhone" class="custom-radio cat-radio"> SmartPhone</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="Headphone" class="custom-radio cat-radio"> Headphone</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="Mobile Accessories" class="custom-radio cat-radio"> Mobile Accessories</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="Gaming Console" class="custom-radio cat-radio"> Gaming Console</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="Camera & Photo" class="custom-radio cat-radio"> Camera & Photo</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="TV & Homes Appliances" class="custom-radio cat-radio"> TV & Homes Appliances</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="Watchs & Accessories" class="custom-radio cat-radio"> Watchs & Accessories</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="GPS & Navigation" class="custom-radio cat-radio"> GPS & Navigation</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="cat"
+                value="Wearable Technology" class="custom-radio cat-radio"> Wearable Technology</label>
+          </div>
+        </div>
+
+        <hr class="text-black-50 my-4">
+
+        <!-- Price Range Filter -->
+        <div class="mb-4 fs-7">
+          <h6 class="fw-bold text-uppercase fs-7 mb-3 text-dark">Price Range</h6>
+          <div class="range-slider-mock mb-3">
+            <div class="range-line" id="rangeLine"></div>
+            <div class="range-dot left" id="rangeDotLeft"></div>
+            <div class="range-dot right" id="rangeDotRight"></div>
+          </div>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <input type="number" id="minPriceInput" class="form-control form-control-sm text-center"
+              placeholder="Min price">
+            <input type="number" id="maxPriceInput" class="form-control form-control-sm text-center"
+              placeholder="Max price">
+          </div>
+          <div class="d-flex flex-column gap-2 text-secondary" id="priceRadioContainer">
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="price" value="all"
+                checked class="custom-radio price-radio"> All Price</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="price" value="0-20"
+                class="custom-radio price-radio"> Under $20</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="price"
+                value="25-100" class="custom-radio price-radio"> $25 to $100</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="price"
+                value="100-300" class="custom-radio price-radio"> $100 to $300</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="price"
+                value="300-500" class="custom-radio price-radio"> $300 to $500</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="price"
+                value="500-1000" class="custom-radio price-radio"> $500 to $1,000</label>
+            <label class="d-flex align-items-center gap-2 cursor-pointer"><input type="radio" name="price"
+                value="1000-10000" class="custom-radio price-radio"> $1,000 to $10,000</label>
+          </div>
+        </div>
+
+        <hr class="text-black-50 my-4">
+
+        <!-- Popular Brands Filter -->
+        <div class="mb-4 fs-7">
+          <h6 class="fw-bold text-uppercase fs-7 mb-3 text-dark">Popular Brands</h6>
+          <div class="row row-cols-2 g-2 text-secondary" id="brandContainer">
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Apple" class="accent-orange brand-checkbox"> Apple</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Google" class="accent-orange brand-checkbox"> Google</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Microsoft" class="accent-orange brand-checkbox"> Microsoft</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Samsung" class="accent-orange brand-checkbox"> Samsung</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Dell" class="accent-orange brand-checkbox"> Dell</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="HP" class="accent-orange brand-checkbox"> HP</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Symphony" class="accent-orange brand-checkbox"> Symphony</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Xiaomi" class="accent-orange brand-checkbox"> Xiaomi</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Sony" class="accent-orange brand-checkbox"> Sony</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Panasonic" class="accent-orange brand-checkbox"> Panasonic</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="LG" class="accent-orange brand-checkbox"> LG</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="Intel" class="accent-orange brand-checkbox"> Intel</label></div>
+            <div class="col"><label class="d-flex align-items-center gap-2 cursor-pointer"><input type="checkbox"
+                  value="OnePlus" class="accent-orange brand-checkbox"> OnePlus</label></div>
+          </div>
+        </div>
+
+        <hr class="text-black-50 my-4">
+
+        <!-- Popular Tag Filter -->
+        <div class="mb-4 fs-7">
+          <h6 class="fw-bold text-uppercase fs-7 mb-3 text-dark">Popular Tag</h6>
+          <div class="d-flex flex-wrap gap-2 fs-7" id="tagsContainer">
+            <span class="tag-badge cursor-pointer" data-tag="Game">Game</span>
+            <span class="tag-badge cursor-pointer" data-tag="iPhone">iPhone</span>
+            <span class="tag-badge cursor-pointer" data-tag="TV">TV</span>
+            <span class="tag-badge cursor-pointer" data-tag="Asus Laptops">Asus Laptops</span>
+            <span class="tag-badge cursor-pointer" data-tag="Macbook">Macbook</span>
+            <span class="tag-badge cursor-pointer" data-tag="SSD">SSD</span>
+            <span class="tag-badge cursor-pointer" data-tag="Graphics Card">Graphics Card</span>
+            <span class="tag-badge cursor-pointer" data-tag="Power Bank">Power Bank</span>
+            <span class="tag-badge cursor-pointer" data-tag="Smart TV">Smart TV</span>
+            <span class="tag-badge cursor-pointer" data-tag="Speaker">Speaker</span>
+            <span class="tag-badge cursor-pointer" data-tag="Tablet">Tablet</span>
+            <span class="tag-badge cursor-pointer" data-tag="Microwave">Microwave</span>
+            <span class="tag-badge cursor-pointer" data-tag="Samsung">Samsung</span>
+          </div>
+        </div>
+
+        <!-- Apple Watch Ad Sidebar Card -->
+        <div class="sidebar-ad-card p-4 text-center rounded border border-warning-subtle position-relative"
+          style="background: #FFF3EB;">
+          <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=300" alt="Apple Watch"
+            class="img-fluid mb-3" style="max-height: 180px;">
+          <div class="fw-bold text-uppercase text-dark fs-6"><i class="fa-solid fa-apple-whole me-1"></i> WATCH</div>
+          <div class="text-danger fw-bold fs-8 tracking-wide">SERIES 7</div>
+          <h5 class="fw-bold text-dark mt-2">Heavy on Features.<br>Light on Price.</h5>
+          <div class="fs-7 my-2 text-muted">Only for: <span
+              class="bg-warning text-dark px-2 py-1 fw-bold rounded fs-6">$299 USD</span></div>
+          <button class="btn btn-orange w-100 fw-bold text-white mt-3 py-2 fs-7 text-uppercase"><i
+              class="fa-solid fa-cart-shopping me-1"></i> Add To Cart</button>
+              <button
+    class="btn btn-outline-orange w-100 fw-bold mt-2 py-2 fs-7 text-uppercase"
+    onclick="window.location.href='product-detail.html?id=1'">
+    View Details
+    <i class="fa-solid fa-arrow-right ms-1"></i>
+</button>
+
+
+
+
+        </div>
+      </aside>
+
+      <!-- MAIN PRODUCTS AREA -->
+      <main class="col-lg-9">
+
+        <!-- Search & Sort Bar -->
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3 fs-7">
+          <div class="input-group search-inner" style="max-width: 380px;">
+            <input type="text" id="innerSearchInput" class="form-control form-control-sm border-end-0"
+              placeholder="Search for anything...">
+            <button class="btn btn-outline-secondary border-start-0" type="button" id="innerSearchBtn"><i
+                class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <span class="text-muted">Sort by:</span>
+            <select class="form-select form-select-sm" id="sortSelect" style="width: 170px;">
+              <option value="popular">Most Popular</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Active Filters Bar -->
+        <div class="d-flex align-items-center justify-content-between bg-light p-2 px-3 rounded mb-4 fs-7 border">
+          <div class="d-flex align-items-center gap-2 flex-wrap" id="activeBadgesContainer">
+            <span class="text-muted">Active Filters:</span>
+            <span class="badge bg-white text-dark border p-2 font-normal" id="catBadge">Electronics Devices <i
+                class="fa-solid fa-xmark ms-1 text-muted cursor-pointer" onclick="resetCategory()"></i></span>
+          </div>
+          <div class="d-flex align-items-center gap-3">
+            <span class="fw-bold text-dark fs-7"><b id="resultsCount">0</b> Results found.</span>
+            <button class="btn btn-sm btn-outline-danger fs-8" onclick="resetAllFilters()">Reset All</button>
+          </div>
+        </div>
+
+        <!-- PRODUCTS GRID -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-xl-4 g-3" id="productsContainer">
+          <!-- Rendered dynamically via JS -->
+        </div>
+
+        <!-- PAGINATION CONTAINER -->
+        <div class="d-flex justify-content-center align-items-center gap-2 my-5" id="paginationContainer">
+          <!-- Rendered dynamically via JS -->
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+  <!-- ==================== TOAST CONTAINER ==================== -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer-dark text-white-50 pt-5 pb-3 fs-7">
+    <div class="container">
+      <div class="row gy-4 border-bottom border-secondary border-opacity-25 pb-4">
+        <div class="col-lg-3">
+          <a href="#" class="d-flex align-items-center gap-2 text-decoration-none text-white fw-bold fs-4 mb-3">
+            <i class="fa-regular fa-circle-dot text-warning"></i> CLICON
+          </a>
+          <p class="mb-1 text-secondary fs-8">Customer Supports:</p>
+          <h6 class="text-white fw-bold fs-6 mb-2">(629) 555-0129</h6>
+          <p class="mb-1 text-secondary">4517 Washington Ave.</p>
+          <p class="mb-1 text-secondary">Manchester, Kentucky 39495</p>
+          <p class="text-white">info@kinbo.com</p>
+        </div>
+        <div class="col-lg-2">
+          <h6 class="text-white fw-bold mb-3 text-uppercase fs-7">Top Category</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 text-secondary">
+            <li><a href="index.html" class="text-secondary text-decoration-none category-link"
+                data-cat="Computer & Laptop">Computer & Laptop</a></li>
+            <li><a href="index.html" class="text-secondary text-decoration-none category-link"
+                data-cat="SmartPhone">SmartPhone</a></li>
+            <li><a href="index.html" class="text-secondary text-decoration-none category-link"
+                data-cat="Headphone">Headphone</a></li>
+            <li><a href="index.html" class="text-warning text-decoration-none fw-semibold category-link"
+                data-cat="Computer Accessories">— Accessories</a></li>
+            <li><a href="index.html" class="text-secondary text-decoration-none category-link"
+                data-cat="Camera & Photo">Camera & Photo</a></li>
+            <li><a href="index.html" class="text-secondary text-decoration-none category-link"
+                data-cat="TV & Homes Appliances">TV & Homes</a></li>
+            <li><a href="index.html" class="text-warning text-decoration-none">Browse All Product <i
+                  class="fa-solid fa-arrow-right ms-1"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h6 class="text-white fw-bold mb-3 text-uppercase fs-7">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2 text-secondary">
+            <li><a href="#" class="text-secondary text-decoration-none">Shop Product</a></li>
+<li><a href="cart.html" class="text-secondary text-decoration-none">Shopping Cart</a></li>            <li><a href="wishlist.html" class="text-secondary text-decoration-none">Wishlist</a></li>
+            <li><a href="#" class="text-secondary text-decoration-none">Compare</a></li>
+            <li><a href="track-order.html" class="text-secondary text-decoration-none">Track Order</a></li>
+            <li><a href="#" class="text-secondary text-decoration-none">Customer Help</a></li>
+            <li><a href="#" class="text-secondary text-decoration-none">About Us</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2">
+          <h6 class="text-white fw-bold mb-3 text-uppercase fs-7">Download App</h6>
+          <div class="d-flex flex-column gap-2">
+            <a href="#"
+              class="btn btn-dark-store border border-secondary border-opacity-50 text-start d-flex align-items-center gap-2 p-2 rounded text-decoration-none text-white">
+              <i class="fa-brands fa-google-play fs-4"></i>
+              <div>
+                <div class="fs-8 text-secondary">Get it now</div>
+                <div class="fw-bold fs-7">Google Play</div>
+              </div>
+            </a>
+            <a href="#"
+              class="btn btn-dark-store border border-secondary border-opacity-50 text-start d-flex align-items-center gap-2 p-2 rounded text-decoration-none text-white">
+              <i class="fa-brands fa-apple fs-4"></i>
+              <div>
+                <div class="fs-8 text-secondary">Get it now</div>
+                <div class="fw-bold fs-7">App Store</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <h6 class="text-white fw-bold mb-3 text-uppercase fs-7">Popular Tag</h6>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Game">Game</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="iPhone">iPhone</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="TV">TV</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Asus Laptops">Asus Laptops</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Macbook">Macbook</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="SSD">SSD</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Graphics Card">Graphics Card</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Power Bank">Power Bank</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Smart TV">Smart TV</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Speaker">Speaker</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Tablet">Tablet</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Microwave">Microwave</span>
+            <span class="tag-badge-dark cursor-pointer footer-tag" data-tag="Samsung">Samsung</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-center pt-3 text-secondary fs-8">
+        Kinbo eCommerce Template © 2021. Design by Templatecookie
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/products-data.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+  <script src="js/compare.js"></script>
+  <script src="js/order-success.js"></script>
+  <script src="js/product-detail.js"></script>
+  <script src="js/shop.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/track-order-details.js"></script>
+  <script src="js/track-order.js"></script>
+  <script src="js/wishlist.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+/* ==========================================
+   WISHLIST PAGE STYLES
+   ========================================== */
+
+/* Table Styles */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #475156;
+  padding: 14px 16px;
+  border-bottom: 2px solid #E4E7E9;
+}
+
+.table tbody td {
+  padding: 16px;
+  vertical-align: middle;
+  border-bottom: 1px solid #F2F4F5;
+}
+
+.table tbody tr:hover {
+  background-color: #FAFAFA;
+}
+
+/* Product Image in Wishlist */
+.wishlist-product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 4px;
+  background: #F2F4F5;
+  border: 1px solid #E4E7E9;
+}
+
+.wishlist-product-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 300px;
+}
+
+/* Buttons */
+.btn-orange {
+  background-color: #FA8232;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.75rem;
+  padding: 6px 14px;
+}
+
+.btn-orange:hover {
+  background-color: #e06d1f;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.btn-orange:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-outline-orange {
+  border: 2px solid #FA8232;
+  color: #FA8232;
+  background: transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  padding: 6px 18px;
+}
+
+.btn-outline-orange:hover {
+  background-color: #FA8232;
+  color: #fff;
+}
+
+.btn-outline-danger {
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  background: transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Badges */
+.badge.bg-brand-blue {
+  background-color: #1B6392 !important;
+  color: #fff;
+}
+
+/* Empty State */
+.empty-state {
+  padding: 60px 20px;
+}
+
+.empty-state i {
+  color: #E4E7E9;
+}
+
+/* Toast Container */
+.toast-container {
+  z-index: 9999;
+}
+
+.toast {
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.toast .btn-close {
+  font-size: 0.7rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table-responsive {
+    border: 0;
+  }
+  
+  .wishlist-product-img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .wishlist-product-title {
+    font-size: 0.75rem;
+    max-width: 150px;
+  }
+  
+  .table tbody td {
+    padding: 10px 8px;
+  }
+  
+  .btn-orange.btn-sm {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+  
+  .btn-outline-danger.btn-sm {
+    font-size: 0.65rem;
+    padding: 4px 8px;
+  }
+  
+  .d-flex.gap-2 {
+    flex-direction: column;
+    gap: 4px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .wishlist-product-title {
+    max-width: 100px;
+  }
+  
+  .table thead th {
+    font-size: 0.65rem;
+    padding: 8px 6px;
+  }
+  
+  .table tbody td {
+    padding: 8px 6px;
+    font-size: 0.75rem;
+  }
+  
+  .wishlist-product-img {
+    width: 32px;
+    height: 32px;
+  }
+}

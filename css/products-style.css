@@ -1,0 +1,133 @@
+/* products-style.css */
+:root {
+  --primary-orange: #FA8232;
+  --secondary-blue: #1B6392;
+  --dark-text: #191C1F;
+  --gray-border: #E4E7E9;
+  --gray-bg: #F2F4F5;
+}
+
+body {
+  font-family: 'Public Sans', system-ui, -apple-system, sans-serif;
+  color: var(--dark-text);
+  background-color: #F8F9FA;
+}
+
+/* Breadcrumb & Top Bar */
+.breadcrumb-item a {
+  color: #5F6C72;
+  text-decoration: none;
+}
+.breadcrumb-item.active {
+  color: var(--secondary-blue);
+  font-weight: 500;
+}
+
+/* Sidebar Styles */
+.filter-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--dark-text);
+  margin-bottom: 12px;
+}
+
+.category-link {
+  color: #475156;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+.category-link:hover, .category-link.active {
+  color: var(--primary-orange);
+  font-weight: 600;
+}
+
+/* Product Card Design */
+.product-card {
+  border: 1px solid var(--gray-border) !important;
+  border-radius: 4px;
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.product-card:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+  border-color: var(--primary-orange) !important;
+}
+
+.product-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.badge-hot { background-color: #EE5858; color: #fff; }
+.badge-deal { background-color: #2DB224; color: #fff; }
+.badge-discount { background-color: #EFD33D; color: #191C1F; }
+
+/* Quick Action Buttons on Hover */
+.product-card .card-actions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+}
+.product-card:hover .card-actions {
+  opacity: 1;
+}
+.action-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-text);
+  transition: background 0.2s, color 0.2s;
+}
+.action-btn:hover {
+  background: var(--primary-orange);
+  color: white;
+}
+
+.btn-add-cart {
+  background-color: var(--primary-orange);
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px;
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+.btn-add-cart:hover {
+  background-color: #DE6D21;
+}
+
+/* Active Filter Badges */
+.active-tag {
+  background-color: var(--gray-bg);
+  color: #5F6C72;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.active-tag i {
+  cursor: pointer;
+}
