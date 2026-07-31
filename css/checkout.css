@@ -346,6 +346,14 @@ h5{
     box-shadow:none;
     border-color:#2DA5F3;
 }
+.form-check{
+    margin-top:15px;
+}
+
+.form-check-input:checked{
+    background:#FA8232;
+    border-color:#FA8232;
+}
 
 textarea.form-control{
     height:120px;
@@ -455,14 +463,6 @@ font-weight:600;
     color:#fff;
 }
 
-.form-check{
-    margin-top:15px;
-}
-
-.form-check-input:checked{
-    background:#FA8232;
-    border-color:#FA8232;
-}
 
 
 
