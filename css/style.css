@@ -1,0 +1,319 @@
+:root {
+  --c-blue: #1B6392;
+  --c-orange: #FA8231;
+  --c-dark-footer: #191C1F;
+  --c-gray-bg: #F2F4F5;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: #191C1F;
+}
+
+.fs-7 { font-size: 0.825rem; }
+.fs-8 { font-size: 0.75rem; }
+.cursor-pointer { cursor: pointer; }
+
+/* NAV & HEADER BLUE */
+.top-header-blue, .main-header-blue {
+  background-color: var(--c-blue);
+}
+
+.text-brand-blue {
+  color: var(--c-blue);
+}
+
+.bg-light-gray {
+  background-color: #F2F4F5;
+}
+
+/* Custom Radio Button: دائرة بيضاء وحولها برتقالي */
+.custom-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #cccccc;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  margin: 0;
+  transition: 0.2s ease-in-out;
+}
+
+.custom-radio:checked {
+  border-color: var(--c-orange);
+  background-color: var(--c-orange);
+  box-shadow: inset 0 0 0 3px #ffffff;
+}
+
+.accent-orange {
+  accent-color: var(--c-orange);
+}
+
+/* BUTTONS */
+.btn-orange {
+  background-color: var(--c-orange);
+  border-color: var(--c-orange);
+  color: white;
+}
+.btn-orange:hover {
+  background-color: #e06d1f;
+  color: white;
+}
+
+.btn-outline-orange {
+  border: 2px solid var(--c-orange);
+  color: var(--c-orange);
+  background: transparent;
+}
+.btn-outline-orange:hover {
+  background-color: var(--c-orange);
+  color: white;
+}
+
+/* SIDEBAR MOCK RANGE SLIDER */
+.range-slider-mock {
+  position: relative;
+  height: 4px;
+  background: #E4E7E9;
+  border-radius: 2px;
+  margin: 15px 0;
+}
+.range-line {
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  height: 100%;
+  background: var(--c-orange);
+  transition: all 0.3s ease;
+}
+.range-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #fff;
+  border: 3px solid var(--c-orange);
+  border-radius: 50%;
+  top: -5px;
+  transition: all 0.3s ease;
+}
+.range-dot.left { left: 0%; }
+.range-dot.right { right: 0%; left: auto; }
+
+/* SIDEBAR TAGS */
+.tag-badge {
+  border: 1px solid #E4E7E9;
+  padding: 4px 10px;
+  border-radius: 2px;
+  color: #475156;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.tag-badge:hover, .tag-badge.active {
+  border-color: var(--c-orange);
+  background: #FFF3EB;
+  color: var(--c-orange);
+}
+
+/* PRODUCT CARD */
+.product-card {
+  border: 1px solid #E4E7E9;
+  border-radius: 4px;
+  background: #fff;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+.product-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-color: var(--c-orange);
+}
+
+.product-img-box {
+  background-color: #F2F4F5;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.product-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.product-card:hover .product-hover-overlay {
+  opacity: 1;
+}
+
+.overlay-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #191C1F;
+  transition: 0.2s;
+}
+.overlay-btn:hover {
+  background: var(--c-orange);
+  color: white;
+}
+
+/* PAGINATION */
+.pagination-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #E4E7E9;
+  background: white;
+  color: #191C1F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.pagination-circle.active {
+  background: var(--c-orange);
+  color: white;
+  border-color: var(--c-orange);
+}
+
+/* FOOTER DARK */
+.footer-dark {
+  background-color: var(--c-dark-footer);
+}
+.tag-badge-dark {
+  border: 1px solid #303639;
+  padding: 4px 8px;
+  border-radius: 2px;
+  color: #929FA5;
+  font-size: 0.75rem;
+  transition: all 0.2s;
+}
+.tag-badge-dark:hover, .tag-badge-dark.active {
+  border-color: #fff;
+  color: #fff;
+}
+
+
+
+
+
+/*product-detail page */
+/* COLOR CIRCLES FOR DETAIL PAGE */
+.color-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.color-circle.active {
+  border-color: var(--c-orange);
+}
+
+/* THUMBNAIL IMAGES */
+.thumb-img {
+  width: 64px;
+  height: 64px;
+  border: 1px solid #E4E7E9;
+  border-radius: 4px;
+  padding: 4px;
+  cursor: pointer;
+  object-fit: contain;
+  background: #F2F4F5;
+}
+.thumb-img.active, .thumb-img:hover {
+  border-color: var(--c-orange);
+}
+
+/**/
+/* ==========================================
+   GLOBAL STYLES (CLICON E-COMMERCE)
+   ========================================== */
+
+/* Buttons */
+.btn-orange {
+  background-color: #FA8232;
+  border-color: #FA8232;
+  color: #fff;
+}
+
+.btn-orange:hover {
+  background-color: #DE732D;
+  border-color: #DE732D;
+  color: #fff;
+}
+
+.btn-outline-orange {
+  border-color: #FA8232;
+  color: #FA8232;
+}
+
+.btn-outline-orange:hover {
+  background-color: #FA8232;
+  color: #fff;
+}
+
+/* Custom Colors & Utilities */
+.text-brand-blue {
+  color: #1B6392;
+}
+
+.bg-brand-blue {
+  background-color: #1B6392;
+}
+
+.bg-light-gray {
+  background-color: #F2F4F5;
+}
+
+.bg-dark-footer {
+  background-color: #191C1F;
+}
+
+/* Custom Font Sizes */
+.fs-7 { 
+  font-size: 0.875rem; 
+}
+
+.fs-8 { 
+  font-size: 0.75rem; 
+}
+
+/* Helpers */
+.cursor-pointer { 
+  cursor: pointer; 
+}
+/* رفع زرار القلب فوق كل الطبقات والصور */
+.wishlist-btn {
+  position: relative !important;
+  z-index: 999 !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+/* ضمان إن الأيقونة نفسها جوه الزرار مابتمنعش الـ Click */
+.wishlist-btn i {
+  pointer-events: none !important;
+}
