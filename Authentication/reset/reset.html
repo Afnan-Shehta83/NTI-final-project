@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style/all.min.css" />
+    <link rel="stylesheet" href="Style/bootstrap.min.css" />
+    <link rel="stylesheet" href="Style/style.css" />
+    <title>Reset Password</title>
+  </head>
+  <body>
+    <!-- !!!!!!!!!!!!!!!!!!!nav bar!!!!!!!!!!!!!!!!!!!!!! -->
+<section class="info-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <span>Welcome to Clicon online eCommerce store.</span>
+        <div class="follow">
+            <span>Follow us:</span>
+            <i class="fab fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fa-brands fa-reddit-alien"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <div class="line"></div>
+            <div class="dropdown">
+    <div class="drop-btn" id="langBtn">
+        <span>Eng</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeLang('Eng',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/us.png" class="flag">
+                <span>English</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeLang('Man',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/cn.png" class="flag">
+                <span>Mandarin</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeLang('Rus',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/ru.png" class="flag">
+                <span>Russian</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+<div class="dropdown">
+    <div class="drop-btn" id="currencyBtn">
+        <span>USD</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeCurrency('USD',this)">
+            <span> Dollar (USD)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeCurrency('EUR',this)">
+            <span>Euro (EUR)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+</section> 
+    <header>
+        <div class="container">
+            <div class="row align-items-center py-3"> 
+                <div class="col-lg-2">
+                    <h3 class="logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+                </div> 
+                <div class="col-lg-7">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for anything...">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-end">
+                  <!-- !!!!!shopping card url !!!! -->
+    <a href="shopping.html">
+        <i class="fa-solid fa-cart-shopping icon"></i>
+    </a>
+    <!-- !!!!!wishlist card url !!!! -->
+    <a href="">
+    <i class="fa-regular fa-heart icon"></i>
+    </a>
+    <!-- !!!!!authentication card url !!!! -->
+    <a href="../login/auth.html">
+    <i class="fa-regular fa-user icon"></i>
+    </a>
+</div>
+            </div>
+        </div>
+    </header> 
+<nav class="menu">
+    <div class="container">
+        <div class="row align-items-center"> 
+            <div class="col-lg-8">
+                <button class="menu-btn d-lg-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li class="select-box">
+    <button class="category-btn" id="categoryBtn">
+        <span>All Category</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </button>
+    <div class="mega-menu" id="megaMenu">
+        <a href="#">Computer & Laptop</a>
+        <a href="#">Computer Accessories</a>
+        <a href="#">SmartPhone</a>
+        <a href="#">Headphones</a>
+        <a href="#">Mobile Accessories</a>
+        <a href="#">Gaming Console</a>
+        <a href="#">Camera & Photo</a>
+        <a href="#">TV & Home Appliances</a>
+    </div>
+</li>
+                    <li>
+                        <a href="#">
+                            <img src="Regular/MapPinLine.svg " alt="Track Order">
+                            Track Order
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="Duotone/ArrowsCounterClockwise.svg " alt="  Compare">
+                            Compare
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../customerSupport/customer.html">
+                            <img src="Regular/Headphones.svg " alt="customer support">
+                            Customer Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="Regular/Info.svg " alt=" Need Help">
+                            Need Help
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+             <div class="col-lg-4 text-end">
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +1-202-555-0104
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+ <!-- !!!!!!!!!!!!!!!!!!!nav bar!!!!!!!!!!!!!!!!!!!!!! -->
+    <nav class="bg-secondary-subtle py-3 mb-0 " style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+  <ol class="breadcrumb container text-secondary align-items-center gap-2 ">
+    <i class="fa-regular fa-house"></i>
+    <!-- !!!!!!!!!!!!!!!!!!!!home url!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <li class="breadcrumb-item "><a class="breadcrumb-link text-secondary" href="../../Homepage.html">Home</a></li>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!user account or home url!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <li class="breadcrumb-item "><a  class="breadcrumb-link text-secondary" href="../../Homepage.html">User Account</a></li>
+    <li class="breadcrumb-item "><a  class="breadcrumb-link text-secondary" href="../login/auth.html">Sign In</a></li>
+    <li class="breadcrumb-item "><a  class="breadcrumb-link text-secondary" href="../forgetPassword/froget.html"> Forget Password</a></li>
+    <li class="breadcrumb-item "><a  class="breadcrumb-link text-secondary" href="../verification/verify.html">Email Verification</a></li>
+    <li class="breadcrumb-item " home urlaria-current="page"><span class="active">Reset Password</span></li>
+  </ol>
+  </nav>
+    <div
+      class="container-fluid min-vh-100 d-flex align-items-center justify-content-center login-cont px-4"
+    >
+      <div
+        class="reset col-12 col-md-8 col-lg-6 mx-3 border border-1 p-3 p-md-4 shadow bg-body-tertiary rounded"
+        style="max-width: 450px"
+      >
+        <div class="reset-header">
+          <p class="fs-5 fw-semibold text-center">Reset Password</p>
+          <p class="lh-sm text-center text-secondary mb-0">
+            Duis sagittis molestie tellus, at eleifend sapien pellque quis.
+            Fusce lorem nunc, fringilla sit amet nunc.
+          </p>
+        </div>
+        <div class="py-2">
+          <form action="" method="post" id="resetForm">
+            <div class="d-flex flex-column py-2">
+              <label for="new-pass" class="py-1">
+                <span>password</span>
+              </label>
+
+              <div class="position-relative">
+                <input
+                  class="form-control text-lowercase text-secondary bg-light border border-secondary-subtle pass-control"
+                  type="password"
+                  id="new-pass"
+                  name="password"
+                  placeholder="8+ characters"
+                  required
+                />
+
+                <i
+                  class="fa-regular fa-eye-slash show position-absolute top-50 end-0 translate-middle"
+                ></i>
+              </div>
+               <ul class="text-danger invalid-pass d-none pt-2">
+                  <li>atleast 8 characters</li>
+                  <li>atleast one letter</li>
+                  <li>atleast one number</li>
+                  <li>atleast one special character</li>
+                </ul>
+            </div>
+            <div class="d-flex flex-column py-2">
+              <label
+                for="confirm-new-pass"
+                class="d-flex justify-content-between py-1"
+              >
+                <span class="text-capitalize">confirm password</span>
+              </label>
+
+              <div class="position-relative">
+                <input
+                  class="form-control text-lowercase text-secondary bg-light border border-secondary-subtle pass-control"
+                  type="password"
+                  id="confirm-new-pass"
+                  name="password"
+                  required
+                />
+
+                <i
+                  class="fa-regular fa-eye-slash position-absolute top-50 end-0 translate-middle show"
+                ></i>
+              </div>
+              <p class="text-danger match-pass d-none">Dosen't match</p>
+            </div>
+            <div class="py-2">
+              <button type="submit"
+                class="w-100 py-2 orange-color submit border rounded-2 text-light fw-medium d-flex justify-content-center align-items-center gap-2"
+              >
+                <span class="text-uppercase fw-medium">Reset Password</span>
+    
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+          <p  class="success text-success"></p>
+        </div>
+      </div>
+    </div>
+    <!-- !!!!!!!!!!!!!!!!!!!!!!!footer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <section class="newsletter">
+    <div class="container text-center">
+        <h2>Subscribe to our newsletter</h2>
+        <p>
+            Praesent fringilla erat a lacinia egestas. Donec vehicula tempor libero et
+            cursus. Donec non quam urna. Quisque vitae porta ipsum.
+        </p>
+        <div class="subscribe-box">
+            <input type="email" placeholder="Email address">
+            <button>
+                SUBSCRIBE
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="brands">
+            <span>Google</span>
+            <span>amazon</span>
+            <span>PHILIPS</span>
+            <span>TOSHIBA</span>
+            <span>SAMSUNG</span>
+        </div>
+    </div>
+</section> 
+<footer class="footer">
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-3">
+ <h3 class="footer-logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+<p>Customer Supports:</p>
+<h4>(629) 555-0129</h4>
+<p>4517 Washington Ave.</p>
+<p>Manchester, Kentucky 39495</p>
+<p>info@kinbo.com</p>
+</div>
+<div class="col-lg-2">
+<h6>TOP CATEGORY</h6>
+<ul>
+<li><a href="#">Computer & Laptop</a></li>
+<li><a href="#">SmartPhone</a></li>
+<li><a href="#">Headphone</a></li>
+<li><a href="#">Accessories</a></li>
+<li><a href="#">Camera & Photo</a></li>
+<li><a href="#">TV & Homes</a></li>
+<li class="browse">
+<a href="#">
+Browse all product<i class="fa-solid  fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>QUICK LINKS</h6>
+<ul>
+<li><a href="#">Shop Product</a></li>
+<li><a href="#">Shopping Cart</a></li>
+<li><a href="#">Wishlist</a></li>
+<li><a href="#">Compare</a></li>
+<li><a href="#">Track Order</a></li>
+<li><a href="../customerSupport/customer.html">Customer Help</a></li>
+<li><a href="#">About Us</a></li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>DOWNLOAD APP</h6>
+<button class="store-btn">
+<i class="fa-brands fa-google-play"></i>
+Google Play
+</button>
+<button class="store-btn">
+<i class="fa-brands fa-apple"></i>
+App Store
+</button>
+</div>
+<div class="col-lg-3">
+<h6>POPULAR TAG</h6>
+<div class="tags">
+<span>Game</span>
+<span>iPhone</span>
+<span>TV</span>
+<span>Asus Laptops</span>
+<span>Macbook</span>
+<span>SSD</span>
+<span>Graphics Card</span>
+<span>Power Bank</span>
+<span>Smart TV</span>
+<span>Speaker</span>
+<span>Tablet</span>
+<span>Microwave</span>
+<span>Samsung</span>
+</div>
+</div>
+</div>
+<hr>
+<p class="copy">
+Kinbo eCommerce Template © 2021. Design by Templatecookie
+</p>
+</div>
+</footer>
+<!-- !!!!!!!!!!!!!!!!!!!!!!!footer!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+    <script src="Script/bootstrap.min.js"></script>
+    <script src="Script/script.js"></script>
+  </body>
+</html>

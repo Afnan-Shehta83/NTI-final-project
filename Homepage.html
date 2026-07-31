@@ -1,0 +1,1405 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="Homepage.css">
+    
+</head>
+<body>
+ <section class="top-bar">
+    <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <span class="black-btn">Black</span>
+                <span class="text-white">Friday</span>
+            </div>
+            <div class="text-white">
+                UP TO<span class="discount"><strong>59% </strong></span>   OFF
+            </div>
+            <div class="right-side d-flex align-items-center">
+    <button class="shop-btn">
+        SHOP NOW
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
+   <button class="close-btn" style="position: relative; left: 80px;">
+    <i class="fa-solid fa-xmark"></i>
+</button>
+</div>
+            </div>
+        </div>
+    </section>
+<section class="info-bar">
+    <div class="container d-flex justify-content-between align-items-center">
+        <span>Welcome to Clicon online eCommerce store.</span>
+        <div class="follow">
+            <span>Follow us:</span>
+            <i class="fab fa-twitter"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fab fa-pinterest-p"></i>
+            <i class="fa-brands fa-reddit-alien"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-instagram"></i>
+            <div class="line"></div>
+            <div class="dropdown">
+    <div class="drop-btn" id="langBtn">
+        <span>Eng</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeLang('Eng',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/us.png" class="flag">
+                <span>English</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeLang('Man',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/cn.png" class="flag">
+                <span>Mandarin</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeLang('Rus',this)">
+            <div class="item-left">
+                <img src="https://flagcdn.com/w40/ru.png" class="flag">
+                <span>Russian</span>
+            </div>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+<div class="dropdown">
+    <div class="drop-btn" id="currencyBtn">
+        <span>USD</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </div>
+    <div class="drop-menu">
+        <div class="drop-item active" onclick="changeCurrency('USD',this)">
+            <span> Dollar (USD)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+        <div class="drop-item" onclick="changeCurrency('EUR',this)">
+            <span>Euro (EUR)</span>
+            <i class="fa-solid fa-check check"></i>
+        </div>
+    </div>
+</div>
+</section> 
+    <header>
+        <div class="container">
+            <div class="row align-items-center py-3"> 
+                <div class="col-lg-2">
+                    <h3 class="logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+                </div> 
+                <div class="col-lg-7">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search for anything...">
+                        <button>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-3 text-end">
+    <a href="shopping.html">
+        <i class="fa-solid fa-cart-shopping icon"></i>
+    </a>
+    <a href=""> 
+    <i class="fa-regular fa-heart icon"></i>
+</a>
+<a href="../NTI-final-project/Authentication/login/auth.html"> 
+    <i class="fa-regular fa-user icon"></i>
+    </a>
+</div>
+
+            </div>
+        </div>
+    </header> 
+<nav class="menu">
+    <div class="container">
+        <div class="row align-items-center"> 
+            <div class="col-lg-8">
+                <button class="menu-btn d-lg-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li class="select-box">
+    <button class="category-btn" id="categoryBtn">
+        <span>All Category</span>
+        <i class="fa-solid fa-angle-down"></i>
+    </button>
+    <div class="mega-menu" id="megaMenu">
+        <a href="#">Computer & Laptop</a>
+        <a href="#">Computer Accessories</a>
+       <div class="phone-item">
+    <a href="#" class="phone-link">
+        <span>SmartPhone</span>
+        <i class="fa-solid fa-angle-right phone-arrow"></i>
+    </a>
+    <div class="phone-dropdown">
+        <a href="#">iPhone</a>
+        <a href="#">Samsung</a>
+        <a href="#">Realme</a>
+        <a href="#">Xiaomi</a>
+        <a href="#">Oppo</a>
+        <a href="#">Vivo</a>
+    </div>
+</div>
+        <a href="#">Headphones</a>
+        <a href="#">Mobile Accessories</a>
+        <a href="#">Gaming Console</a>
+        <a href="#">Camera & Photo</a>
+        <a href="#">TV & Home Appliances</a>
+    </div>
+</li>
+                    <li>
+                        <a href="#">
+                            <img src="Regular/MapPinLine.svg " alt="Track Order">
+                            Track Order
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="Duotone/ArrowsCounterClockwise.svg " alt="  Compare">
+                            Compare
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../NTI-final-project/Authentication/customerSupport/customer.html">
+                            <img src="Regular/Headphones.svg " alt="customer support">
+                            Customer Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                           <img src="Regular/Info.svg " alt=" Need Help">
+                            Need Help
+                        </a>
+                    </li>
+                </ul>
+            </div> 
+             <div class="col-lg-4 text-end">
+                <div class="phone">
+                    <i class="fa-solid fa-phone"></i>
+                    +1-202-555-0104
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+   <script src="Homepage.js"></script> 
+
+ <!-- Hero Section -->
+<section class="hero py-4">
+    <div class="container">
+        <div class="row g-3">
+
+            <!-- Left Banner -->
+            <div class="col-lg-8">
+                <div class="hero-left">
+                    <div class="hero-content">
+                        <small>THE BEST PLACE TO PLAY</small>
+                        <h1>Xbox Consoles</h1>
+                        <p>
+                            Save up to 50% on select Xbox games.
+                            Get 3 months of PC Game Pass for $2 USD.
+                        </p>
+                        <button class="hero-btn">
+                            SHOP NOW <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <img src="3143a7d593779ec659fc9333be996cce47390fa1.png" class="xbox-img">
+                    <div class="price-circle">
+                        $299
+                    </div>
+                    <div class="slider-dots">
+                        <span class="active"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-lg-4">
+                <div class="top-banner">
+                    <span class="sale">SUMMER SALES</span>
+                    <h3>
+                        New Google <br>
+                        Pixel 6 Pro
+                    </h3>
+                    <button class="hero-btn small-btn">
+                        SHOP NOW <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                    <img src="1e27e3da3a9722cbfd03ad06711ce321ea6a8e37.png">
+                    <div class="offer">
+                        29% OFF
+                    </div>
+                </div>
+                <div class="bottom-banner">
+                    <img src="77ff1aeb09dedd4bf17ee12f721038f32073f7a3.png">
+                    <div>
+                        <h3>Xiaomi <br> FlipBuds Pro</h3>
+                        <h5>$299 USD</h5>
+                        <button class="hero-btn small-btn">
+                            SHOP NOW  <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="services mt-3">
+            <div class="service">
+               <img src="Duotone/Package.svg" alt="Track Order" >
+                <div>
+                    <h6>FASTED DELIVERY</h6>
+                    <span>Delivery in 24/H</span>
+                </div>
+            </div>
+            <div class="service">
+                <img src="Duotone/Trophy.svg" alt="Track Order">
+                <div>
+                    <h6>24 HOURS RETURN</h6>
+                    <span>100% money-back guarantee</span>
+                </div>
+            </div>
+            <div class="service">
+                <img src="Duotone/CreditCard.svg" alt="Track Order">
+                <div>
+                    <h6>SECURE PAYMENT</h6>
+                    <span>Your money is safe</span>
+                </div>
+            </div>
+            <div class="service">
+                <img src="Duotone/Headphones.svg" alt="Track Order">
+                <div>
+                    <h6>SUPPORT 24/7</h6>
+                    <span>Live contact/message</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="best-deals container my-5">
+    <div class="deals-header">
+        <div class="left">
+            <h3>Best Deals</h3>
+            <span>Deals ends in</span>
+            <span class="timer">16d : 21h : 57m : 23s</span>
+        </div>
+        <a href="#">
+            Browse All Product
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+
+    <div class="deals-grid">
+
+        <!-- Big Product -->
+        <div class="big-product">
+            <span class="sale-badge">32% OFF</span>
+            <span class="hot-badge">HOT</span>
+            <img src="a81ee337d4864b5bf82a65669ff6c6b965655324.png" alt="">
+            <div class="stars">
+                ★★★★★
+                <span>(52,677)</span>
+            </div>
+            <h5>
+                Xbox Series S - 512GB SSD Console with Wireless Controller
+            </h5>
+            <div class="price-row">
+                <del>$865.99</del>
+                <span>$442.12</span>
+            </div>
+            <p>
+                Games built using the Xbox Series X|S development kit showcase significantly reduced load times and stunning visuals.
+            </p>
+            <div class="buttons">
+                <button class="icon-btn">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                <button class="cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    ADD TO CART
+                </button>
+                <button class="icon-btn">
+                    <i class="fa-regular fa-eye"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Products -->
+        <div class="products-grid-box">
+
+    <div class="product-item-card">
+        <div class="product-image-wrapper">
+            <img src="45ffebea53178df09da5b55aa5ec9c64f9c97219.png" alt="Product">
+
+            <div class="product-action-buttons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-eye"></i></a>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <h3>Portable Washing Machine, 11lbs capacity</h3>
+
+            <div class="product-price-box">
+                <span class="old-product-price">$865.99</span>
+                <span class="current-product-price">$70</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-item-card">
+        <div class="product-image-wrapper">
+            <img src="2c2703028e858e93057b03391653381259c5700c.png" alt="Product">
+
+            <div class="product-action-buttons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-eye"></i></a>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <h3>Wireless Bluetooth Headphones</h3>
+
+            <div class="product-price-box">
+                <span class="old-product-price">$220</span>
+                <span class="current-product-price">$149</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-item-card">
+        <div class="product-image-wrapper">
+            <img src="77ff1aeb09dedd4bf17ee12f721038f32073f7a3.png" alt="Product">
+
+            <div class="product-action-buttons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-eye"></i></a>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <h3>Gaming Mechanical Keyboard</h3>
+
+            <div class="product-price-box">
+                <span class="old-product-price">$120</span>
+                <span class="current-product-price">$89</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-item-card">
+        <div class="product-image-wrapper">
+            <img src="a669957b269d26688b7fa4a2ff9b422a708bab91.png" alt="Product">
+
+            <div class="product-action-buttons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-eye"></i></a>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <h3>Smart Watch Series 9</h3>
+
+            <div class="product-price-box">
+                <span class="old-product-price">$350</span>
+                <span class="current-product-price">$260</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-item-card">
+        <div class="product-image-wrapper">
+            <img src="bfff735353defe484834b22911ee350ed96cc0b7.png" alt="Product">
+
+            <div class="product-action-buttons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-eye"></i></a>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <h3>Professional DSLR Camera</h3>
+
+            <div class="product-price-box">
+                <span class="old-product-price">$999</span>
+                <span class="current-product-price">$799</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-item-card">
+        <div class="product-image-wrapper">
+            <img src="e2c006f961a88c6ffdcef9bfaf8dae64692d02c6.png" alt="Product">
+
+            <div class="product-action-buttons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-eye"></i></a>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <h3>Portable Bluetooth Speaker</h3>
+
+            <div class="product-price-box">
+                <span class="old-product-price">$180</span>
+                <span class="current-product-price">$120</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-item-card">
+        <div class="product-image-wrapper">
+            <img src="8b7da2e5b680368b609673291d0d811ef1d61429.png" alt="Product">
+
+            <div class="product-action-buttons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-eye"></i></a>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <h3>Wireless Computer Mouse</h3>
+
+            <div class="product-price-box">
+                <span class="old-product-price">$55</span>
+                <span class="current-product-price">$39</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-item-card">
+        <div class="product-image-wrapper">
+            <img src="0e25c65909ff9d8fdace00ffb430dbc3cbf9784b.png" alt="Product">
+
+            <div class="product-action-buttons">
+                <a href="#"><i class="fa-regular fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-regular fa-eye"></i></a>
+            </div>
+        </div>
+
+        <div class="product-details-content">
+            <h3>4K Ultra HD Monitor</h3>
+
+            <div class="product-price-box">
+                <span class="old-product-price">$450</span>
+                <span class="current-product-price">$329</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+</section>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="Homepage.css">
+</head>
+<body>
+<section class="py-4">
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4">Shop with Categorys</h2>
+        <div class="position-relative">
+
+            <!-- Left Button -->
+            <button class="arrow left">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <div class="row g-3 justify-content-center">
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="ca28168661494544c040fd06143b1849c7e4949c.png" alt="">
+                        <p>Computer & Laptop</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="73ed2beb18a318d21fd8032b1eee4f78954a1f41.png" alt="">
+                        <p>SmartPhone</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="02b5b8148c7964c637473e93f37838c61aa6518a.png" alt="">
+                        <p>Headphones</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="087aa93b61f852570ef1a276c308f0bac501f965.png" alt="">
+                        <p>Accessories</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="e2c006f961a88c6ffdcef9bfaf8dae64692d02c6.png" alt="">
+                        <p>Camera & Photo</p>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4 col-6">
+                    <div class="category-card">
+                        <img src="533762fd955d09b426e32da1e1ba5d72846dcc87.png" alt="">
+                        <p>TV & Homes</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Button -->
+            <button class="arrow right">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+<section class="container my-5">
+    <div class="row">
+
+        <!-- Left Banner -->
+        <div class="col-lg-3 mb-4">
+            <div class="offer-banner">
+                <small>COMPUTER & ACCESSORIES</small>
+                <h2>32% Discount</h2>
+                <p>For all electronics products</p>
+                <p class="end">
+                    Offers ends in:
+                    <span>ENDS OF CHRISTMAS</span>
+                </p>
+                <button class="btn btn-warning text-white px-4 py-2">
+                    SHOP NOW <i class="fa-solid fa-arrow-right ms-2"></i>
+                </button>
+                <img src="a5935e4ae865aea09c3021d056c99782b3748bc2.jpg" class="product-image-tall">
+            </div>
+        </div>
+
+        <!-- Products -->
+        <div class="col-lg-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3>Featured Products</h3>
+                <div class="menu">
+                    <a href="#" class="active">All Product</a>
+                    <a href="#">Smart Phone</a>
+                    <a href="#">Laptop</a>
+                    <a href="#">Headphone</a>
+                    <a href="#">TV</a>
+                    <a href="#" class="browse">
+                        Browse All Product
+                    </a>
+                </div>
+            </div>
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card">
+        <img src="19f8efb6b687c0c55e606ba75d77672a5e6f1843.png" class="card-img-top">
+        <div class="card-body">
+           <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span class="reviews">(536)</span>
+</div>
+<h6 class="product-title">
+    Samsung Electronics Samsung Galaxy S21 5G
+</h6>
+            <h5 class="price">
+                $299
+            </h5>     
+        </div>
+    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card">
+        <img src="4d11c06a3b45a80aa15dd6606ef1562a06207fcc.png" class="card-img-top">
+        <div class="card-body">
+           <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span class="reviews">(536)</span>
+</div>
+<h6 class="product-title">
+    Samsung Electronics Samsung Galaxy S21 5G
+</h6>
+            <h5 class="price">
+                $299
+            </h5>     
+        </div>
+    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="card product-card">
+        <img src="8b7da2e5b680368b609673291d0d811ef1d61429.png" class="card-img-top">
+        <div class="card-body">
+           <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span class="reviews">(536)</span>
+</div>
+<h6 class="product-title">
+    Samsung Electronics Samsung Galaxy S21 5G
+</h6>
+            <h5 class="price">
+                $299
+            </h5>     
+        </div>
+    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card">
+        <img src="75f933488e77c84cec61c3d90da76bd9f858e174.png" class="card-img-top">
+        <div class="card-body">
+           <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span class="reviews">(536)</span>
+</div>
+<h6 class="product-title">
+    Samsung Electronics Samsung Galaxy S21 5G
+</h6>
+            <h5 class="price">
+                $299
+            </h5>     
+        </div>
+    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                   <div class="card product-card">
+        <img src="737fab14deba33544aa6bd068190f87ad999d05b.png" class="card-img-top">
+        <div class="card-body">
+           <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span class="reviews">(536)</span>
+</div>
+<h6 class="product-title">
+    Samsung Electronics Samsung Galaxy S21 5G
+</h6>
+            <h5 class="price">
+                $299
+            </h5>     
+        </div>
+    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                   <div class="card product-card">
+        <img src="aea077bf04af7282f36991b02261f6144abee355.png" class="card-img-top">
+        <div class="card-body">
+           <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span class="reviews">(536)</span>
+</div>
+<h6 class="product-title">
+    Samsung Electronics Samsung Galaxy S21 5G
+</h6>
+            <h5 class="price">
+                $299
+            </h5>     
+        </div>
+    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                     <div class="card product-card">
+        <img src="f9bf2cf3071c7c521aa2c422d5d23dd010c66f66.png" class="card-img-top">
+        <div class="card-body">
+           <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span class="reviews">(536)</span>
+</div>
+<h6 class="product-title">
+    Samsung Electronics Samsung Galaxy S21 5G
+</h6>
+            <h5 class="price">
+                $299
+            </h5>     
+        </div>
+    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                   <div class="card product-card">
+        <img src="2c2703028e858e93057b03391653381259c5700c.png" class="card-img-top">
+        <div class="card-body">
+           <div class="stars">
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-solid fa-star"></i>
+    <i class="fa-regular fa-star"></i>
+    <span class="reviews">(536)</span>
+</div>
+<h6 class="product-title">
+    Samsung Electronics Samsung Galaxy S21 5G
+</h6>
+            <h5 class="price">
+                $299
+            </h5>     
+        </div>
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="container my-5">
+    <div class="row g-3">
+
+        <!-- Left Banner -->
+        <div class="col-lg-6">
+            <div class="banner banner-light">
+                <div class="content">
+                    <span class="tag blue">INTRODUCING</span>
+                    <h2>New Apple <br> HomePod Mini</h2>
+                    <p>
+                        Jam-packed with innovation,<br>
+                        HomePod mini delivers unexpectedly.
+                    </p>
+                    <button class="hero-btn">
+                        SHOP NOW
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <img src="b3e5e0816e177fdb427092d6b8d921475a201918.png" alt="">
+            </div>
+        </div>
+
+        <!-- Right Banner -->
+        <div class="col-lg-6">
+            <div class="banner banner-dark">
+                <span class="price-circle">$590</span>
+                <div class="content">
+                    <span class="tag yellow">INTRODUCING NEW</span>
+                    <h2>Xiaomi Mi 11 Ultra <br>12GB+256GB</h2>
+                    <p>
+                        *Data provided by internal<br>
+                        laboratories. Industry measurement.
+                    </p>
+                    <button class="hero-btn">
+                        SHOP NOW
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <img src="e6ff3417e24ae221ecb7179d94af93cf33ba079b.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="computer-accessories py-5">
+    <div class="container">
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4"> 
+            <h3 class="fw-bold">Computer Accessories</h3> 
+            <ul class="nav accessories-nav">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">All Product</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Keyboard & Mouse</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Headphone</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Webcam</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Printer</a>
+                </li> 
+                <li class="nav-item">
+                    <a href="#" class="nav-link browse">
+                        Browse All Product →
+                    </a>
+                </li>
+            </ul> 
+        </div> 
+        <div class="row">
+
+            <!-- Products -->
+            <div class="col-lg-9">
+                <div class="row g-3">
+
+                    <!-- Product -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="accessory-card">
+                            <span class="badge best">BEST DEALS</span>
+                            <img src="ed62e58d23bd3d5abbca613c97251d7a95cb75d3.png" class="img-fluid">
+                            <div class="card-info">
+                                <div class="stars">
+                                    ★★★★☆
+                                    <span>(738)</span>
+                                </div>
+                                <h6>
+                                    TOZO T6 True Wireless Earbuds Bluetooth
+                                </h6>
+                                <div class="price">
+                                    $70
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="accessory-card">
+                            <span class="badge sale">SALE</span>
+                            <img src="75f933488e77c84cec61c3d90da76bd9f858e174.png" class="img-fluid">
+                            <div class="card-info">
+                                <div class="stars">
+                                    ★★★★★
+                                    <span>(536)</span>
+                                </div>
+                                <h6>
+                                    Samsung Electronics Galaxy Book
+                                </h6>
+                                <div class="price">
+                                    $2300
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="accessory-card">
+                            <img src="087aa93b61f852570ef1a276c308f0bac501f965.png" class="img-fluid">
+                            <div class="card-info">
+                                <div class="stars">
+                                    ★★★★☆
+                                    <span>(423)</span>
+                                </div>
+                                <h6>
+                                    Portable External Hard Drive USB 3.0
+                                </h6>
+                                <div class="price">
+                                    $80
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="accessory-card">
+                            <span class="badge off">25% OFF</span>
+                            <img src="a669957b269d26688b7fa4a2ff9b422a708bab91.png" class="img-fluid">
+                            <div class="card-info">
+                                <div class="stars">
+                                    ★★★★★
+                                    <span>(816)</span>
+                                </div>
+                                <h6>
+                                    Logitech MX Master Wireless Mouse
+                                </h6>
+                                <div class="price">
+                                    $199
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="accessory-card">
+                            <img src="bfff735353defe484834b22911ee350ed96cc0b7.png" class="img-fluid">
+                            <div class="card-info">
+                                <div class="stars">
+                                    ★★★★☆
+                                    <span>(516)</span>
+                                </div>
+                                <h6>
+                                    Mechanical RGB Gaming Keyboard
+                                </h6>
+                                <div class="price">
+                                    $99
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="accessory-card">
+                            <span class="badge hot">HOT</span>
+                            <img src="a2bcce713855ae2fd192a32dfdf3f83c573dc660.png" class="img-fluid">
+                            <div class="card-info">
+                                <div class="stars">
+                                    ★★★★★
+                                    <span>(600)</span>
+                                </div>
+                                <h6>
+                                    ASUS Gaming Monitor Full HD
+                                </h6>
+                                <div class="price">
+                                    $420
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="accessory-card">
+                            <img src="5e1217e5d2d0007baf0fb9d3df15aaa7bf2b305f.png" class="img-fluid">
+                            <div class="card-info">
+                                <div class="stars">
+                                    ★★★★☆
+                                    <span>(472)</span>
+                                </div>
+                                <h6>
+                                    Canon PIXMA Wireless Printer
+                                </h6>
+                                <div class="price">
+                                    $250
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="accessory-card">
+                            <img src="fb1330601a226650101c63cd37daa0583a1f726d.png" class="img-fluid">
+                            <div class="card-info">
+                                <div class="stars">
+                                    ★★★★★
+                                    <span>(990)</span>
+                                </div>
+                                <h6>
+                                    HD Webcam with Microphone
+                                </h6>
+                                <div class="price">
+                                    $79
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side -->
+            <div class="col-lg-3">
+                <div class="right-banner banner-one">
+                    <img src="4b480bd388d0435a7655fbca6aa273ad5ce196e1.png" class="img-fluid mb-4">
+                    <h4>Xiaomi True Wireless Earbuds</h4>
+                    <p>
+                        Escape the noise. It's time to hear the magic.
+                    </p>
+                    <div class="offer-price">
+                        Only for <strong>$299 USD</strong>
+                    </div>
+                    <a href="#" class="btn btn-warning w-100 mt-3">
+                        SHOP NOW →
+                    </a>
+                </div>
+                <div class="right-banner banner-two mt-3">
+                    <small>SUMMER SALES</small>
+                    <h2>37% DISCOUNT</h2>
+                    <p>
+                        only for Smartphone products
+                    </p>
+                    <a href="#" class="btn btn-light w-100">
+                        SHOP NOW →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="promo-mac-wrap py-5">
+    <div class="container">
+        <div class="promo-mac-card">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <span class="promo-save-label">
+                        SAVE UP TO $200.00
+                    </span>
+                    <h2 class="promo-mac-heading">
+                        Macbook Pro
+                    </h2>
+                    <p class="promo-mac-desc">
+                        Apple M1 Max Chip. 32GB Unified
+                        Memory, 1TB SSD Storage
+                    </p>
+                    <a href="#" class="promo-shop-btn">
+                        SHOP NOW
+                        <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6 position-relative text-center">
+                    <div class="promo-price-badge">
+                        $1999
+                    </div>
+                    <img src="85b0d3b5fbf2d4a308ed09b8dd0b0ff62d7ea9d4.png" class="promo-mac-image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="mini-products-showcase py-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- Column 1 -->
+            <div class="col-lg-3 col-md-6">
+
+                <h5 class="mini-section-title">FLASH SALE TODAY</h5>
+
+                <div class="mini-product-box">
+                    <img src="a2bcce713855ae2fd192a32dfdf3f83c573dc660.png" class="mini-product-img">
+
+                    <div class="mini-product-info">
+                        <h6>Bose Sport Earbuds-Wireless Earphones</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+
+                <div class="mini-product-box">
+                    <img src="4d11c06a3b45a80aa15dd6606ef1562a06207fcc.png" class="mini-product-img">
+
+                    <div class="mini-product-info">
+                        <h6>Simple Mobile 4G LTE Prepaid Smartphone</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+                <div class="mini-product-box">
+                    <img src="087aa93b61f852570ef1a276c308f0bac501f965.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>4K UHD LED Smart TV with Chromecast</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mini-section-title">BEST SELLERS</h5>
+                <div class="mini-product-box">
+                    <img src="a81ee337d4864b5bf82a65669ff6c6b965655324.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>Samsung Galaxy S21 5G</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+                <div class="mini-product-box">
+                    <img src="6861bd5cd64f37ecf68eb8d28f8d0c7ef90bce6d.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>Simple Mobile 5G LTE Galaxy</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+                <div class="mini-product-box">
+                    <img src="19f8efb6b687c0c55e606ba75d77672a5e6f1843.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>Sony DSCHX8 Camera</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mini-section-title">TOP RATED</h5>
+                <div class="mini-product-box">
+                    <img src="aea077bf04af7282f36991b02261f6144abee355.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>Portable Washing Machine</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+                <div class="mini-product-box">
+                    <img src="45ffebea53178df09da5b55aa5ec9c64f9c97219.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>Sony Digital Camera</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+                <div class="mini-product-box">
+                    <img src="85822a8c202adfe7edcc6e0e7124d80823f51b11.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>Dell Monitor</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="mini-section-title">NEW ARRIVAL</h5>
+                <div class="mini-product-box">
+                    <img src="2c2703028e858e93057b03391653381259c5700c.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>TOZO T6 True Wireless Earbuds</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+                <div class="mini-product-box">
+                    <img src="5e1217e5d2d0007baf0fb9d3df15aaa7bf2b305f.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>JBL FLIP 4 Bluetooth Speaker</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+                <div class="mini-product-box">
+                    <img src="0e25c65909ff9d8fdace00ffb430dbc3cbf9784b.png" class="mini-product-img">
+                    <div class="mini-product-info">
+                        <h6>Wyze Pan Camera</h6>
+                        <span>$1,500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="news-showcase-area py-5">
+    <div class="container">
+        <h2 class="news-main-title text-center mb-5">
+            Latest News
+        </h2>
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-post-card">
+                    <img src="a4bf09a2b2a0c4b41e79e059808e84ae39035884.jpg" class="news-post-image">
+                    <div class="news-post-content">
+                        <div class="news-post-meta">
+                            <span>
+                                <i class="fa-regular fa-user"></i>
+                                Kristin
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-calendar"></i>
+                                19 Dec, 2013
+                            </span>
+                            <span>
+                                <i class="fa-regular fa-comment"></i>
+                                453
+                            </span>
+                        </div>
+                        <h5 class="news-post-title">
+                            Cras nisl dolor, accumsan et metus sit amet,
+                            vulputate condimentum dolor.
+                        </h5>
+                        <p class="news-post-text">
+                            Maecenas scelerisque, arcu quis tempus egestas,
+                            ligula diam molestie lectus, tincidunt malesuada
+                            arcu metus posuere metus.
+                        </p>
+                        <a href="#" class="news-read-btn">
+                            READ MORE
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-post-card">
+                    <img src="464a92160a37ca30b46811cb1272a616ad550367.jpg" class="news-post-image">
+                    <div class="news-post-content">
+                        <div class="news-post-meta">
+                            <span><i class="fa-regular fa-user"></i> Robert</span>
+                            <span><i class="fa-regular fa-calendar"></i> 28 Nov, 2015</span>
+                            <span><i class="fa-regular fa-comment"></i> 738</span>
+                        </div>
+                        <h5 class="news-post-title">
+                            Curabitur pulvinar aliquam lectus,
+                            non blandit erat mattis vitae.
+                        </h5>
+                        <p class="news-post-text">
+                            Mauris scelerisque odio id rutrum volutpat.
+                            Pellentesque urna odio, vulputate at tortor vitae,
+                            hendrerit blandit lorem.
+                        </p>
+                        <a href="#" class="news-read-btn">
+                            READ MORE
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="news-post-card">
+                    <img src="1ae4ad19fb920c42a1ba4e000babe2f166d453af.jpg" class="news-post-image">
+                    <div class="news-post-content">
+                        <div class="news-post-meta">
+                            <span><i class="fa-regular fa-user"></i> Arlene</span>
+                            <span><i class="fa-regular fa-calendar"></i> 9 May, 2014</span>
+                            <span><i class="fa-regular fa-comment"></i> 826</span>
+                        </div>
+                        <h5 class="news-post-title">
+                            Curabitur massa orci, consectetur et blandit ac,
+                            auctor et tellus.
+                        </h5>
+                        <p class="news-post-text">
+                            Pellentesque vestibulum lorem vel gravida aliquam.
+                            Morbi porta, odio id suscipit mattis,
+                            risus augue condimentum purus.
+                        </p>
+                        <a href="#" class="news-read-btn">
+                            READ MORE
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="newsletter">
+    <div class="container text-center">
+        <h2>Subscribe to our newsletter</h2>
+        <p>
+            Praesent fringilla erat a lacinia egestas. Donec vehicula tempor libero et
+            cursus. Donec non quam urna. Quisque vitae porta ipsum.
+        </p>
+        <div class="subscribe-box">
+            <input type="email" placeholder="Email address">
+            <button>
+                SUBSCRIBE
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="brands">
+            <span>Google</span>
+            <span>amazon</span>
+            <span>PHILIPS</span>
+            <span>TOSHIBA</span>
+            <span>SAMSUNG</span>
+        </div>
+    </div>
+</section> 
+<footer class="footer">
+<div class="container">
+<div class="row gy-4">
+<div class="col-lg-3">
+ <h3 class="footer-logo">
+                        <i class="fa-regular fa-circle-dot"></i>
+                        CLICON
+                    </h3>
+<p>Customer Supports:</p>
+<h4>(629) 555-0129</h4>
+<p>4517 Washington Ave.</p>
+<p>Manchester, Kentucky 39495</p>
+<p>info@kinbo.com</p>
+</div>
+<div class="col-lg-2">
+<h6>TOP CATEGORY</h6>
+<ul>
+<li><a href="#">Computer & Laptop</a></li>
+<li><a href="#">SmartPhone</a></li>
+<li><a href="#">Headphone</a></li>
+<li><a href="#">Accessories</a></li>
+<li><a href="#">Camera & Photo</a></li>
+<li><a href="#">TV & Homes</a></li>
+<li class="browse">
+<a href="#">
+Browse all product<i class="fa-solid  fa-arrow-right"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>QUICK LINKS</h6>
+<ul>
+<li><a href="#">Shop Product</a></li>
+<li><a href="#">Shopping Cart</a></li>
+<li><a href="#">Wishlist</a></li>
+<li><a href="#">Compare</a></li>
+<li><a href="#">Track Order</a></li>
+<li><a href="../NTI-final-project/Authentication/customerSupport/customer.html">Customer Help</a></li>
+<li><a href="#">About Us</a></li>
+</ul>
+</div>
+<div class="col-lg-2">
+<h6>DOWNLOAD APP</h6>
+<button class="store-btn">
+<i class="fa-brands fa-google-play"></i>
+Google Play
+</button>
+<button class="store-btn">
+<i class="fa-brands fa-apple"></i>
+App Store
+</button>
+</div>
+<div class="col-lg-3">
+<h6>POPULAR TAG</h6>
+<div class="tags">
+<span>Game</span>
+<span>iPhone</span>
+<span>TV</span>
+<span>Asus Laptops</span>
+<span>Macbook</span>
+<span>SSD</span>
+<span>Graphics Card</span>
+<span>Power Bank</span>
+<span>Smart TV</span>
+<span>Speaker</span>
+<span>Tablet</span>
+<span>Microwave</span>
+<span>Samsung</span>
+</div>
+</div>
+</div>
+<hr>
+<p class="copy">
+Kinbo eCommerce Template © 2021. Design by Templatecookie
+</p>
+</div>
+</footer>
+
+
+
+<script src="Homepage.js"></script>
+</body>
+</html>
