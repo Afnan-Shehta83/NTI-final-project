@@ -42,7 +42,7 @@ categoryBtn.onclick = function(e){
 document.addEventListener("click",function(){
     megaMenu.classList.remove("show");
 }); 
-//====== me======
+//================ checkout part===============
 // ================= Cart =================
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
