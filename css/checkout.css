@@ -292,7 +292,9 @@ position:relative;
 .drop-item span{
     color:rgba(0, 0, 0, 0.458);
 }
-/* ======BREADCRUMB============== */
+
+/* ============BREADCRUMB============== */
+
 .breadcrumb-section{
     background-color:#F2F4F5 ;
 }
@@ -310,6 +312,9 @@ position:relative;
     background:#fff;
 }
 
+/* ===========LEFT SIDE============ */
+
+
 h4{
     font-size:22px;
     color:#191C1F;
@@ -319,7 +324,6 @@ h5{
     font-size:18px;
     color:#191C1F;
 }
-
 .form-label{
     font-size:14px;
     color:#191C1F;
@@ -341,6 +345,14 @@ h5{
 .form-select:focus{
     box-shadow:none;
     border-color:#2DA5F3;
+}
+.form-check{
+    margin-top:15px;
+}
+
+.form-check-input:checked{
+    background:#FA8232;
+    border-color:#FA8232;
 }
 
 textarea.form-control{
@@ -451,14 +463,6 @@ font-weight:600;
     color:#fff;
 }
 
-.form-check{
-    margin-top:15px;
-}
-
-.form-check-input:checked{
-    background:#FA8232;
-    border-color:#FA8232;
-}
 
 
 
