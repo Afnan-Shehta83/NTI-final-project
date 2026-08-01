@@ -1,3 +1,10 @@
+//زرار القفل
+const closeBtn = document.querySelector(".close-btn");
+closeBtn.addEventListener("click", function ()
+ {
+    window.location.href = "https://www.google.com";
+});
+
 //عشان الدروب داون بتاعة اللغة و العملة نضغط عليها و تبين القايمة
 let buttons=document.querySelectorAll(".drop-btn");
 buttons.forEach(btn=>{
@@ -52,13 +59,7 @@ categoryBtn.onclick = function(e){
 document.addEventListener("click",function(){
     megaMenu.classList.remove("show");
 }); 
-
-//زرار القفل
-const closeBtn = document.querySelector(".close-btn");
-closeBtn.addEventListener("click", function ()
- {
-    window.location.href = "https://www.google.com";
-});
+ 
 
 //التايمر
 const endDate = new Date("August 15, 2026 23:59:59").getTime();

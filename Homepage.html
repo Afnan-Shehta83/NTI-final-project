@@ -6,9 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="Homepage.css">
-    
 </head>
 <body>
+<!-------------------------------- الهيدرالجزء الاسود------------------------------------->
  <section class="top-bar">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center">
@@ -28,9 +28,11 @@
     <i class="fa-solid fa-xmark"></i>
 </button>
 </div>
-            </div>
-        </div>
-    </section>
+</div>
+</div>
+</section>
+
+<!--الهيدر الجزء الازرق اللي فوق -->
 <section class="info-bar">
     <div class="container d-flex justify-content-between align-items-center">
         <span>Welcome to Clicon online eCommerce store.</span>
@@ -43,10 +45,11 @@
             <i class="fab fa-youtube"></i>
             <i class="fab fa-instagram"></i>
             <div class="line"></div>
-            <div class="dropdown">
+
+    <div class="dropdown">
     <div class="drop-btn" id="langBtn">
         <span>Eng</span>
-        <i class="fa-solid fa-angle-down"></i>
+        <i class="fa-solid fa-angle-down"></i><!--ايقونة السهم لتحت-->
     </div>
     <div class="drop-menu">
         <div class="drop-item active" onclick="changeLang('Eng',this)">
@@ -89,6 +92,7 @@
     </div>
 </div>
 </section> 
+<!--الهيدر الجزء اللي تحت-->
     <header>
         <div class="container">
             <div class="row align-items-center py-3"> 
@@ -102,7 +106,7 @@
                     <div class="search-box">
                         <input type="text" placeholder="Search for anything...">
                         <button>
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-magnifying-glass"></i><!--ايقونة العدسة بتاعة البحث -->
                         </button>
                     </div>
                 </div>
@@ -117,10 +121,11 @@
     <i class="fa-regular fa-user icon"></i>
     </a>
 </div>
+</div>
+</div>
+</header> 
 
-            </div>
-        </div>
-    </header> 
+<!--اخر جزء في الهيدر اللي هو الابيض-->
 <nav class="menu">
     <div class="container">
         <div class="row align-items-center"> 
@@ -132,15 +137,15 @@
                     <li class="select-box">
     <button class="category-btn" id="categoryBtn">
         <span>All Category</span>
-        <i class="fa-solid fa-angle-down"></i>
+        <i class="fa-solid fa-angle-down"></i><!--سهم القايمة-->
     </button>
-    <div class="mega-menu" id="megaMenu">
+    <div class="mega-menu" id="megaMenu"><!--القايمة بقى ذات نفسها و مربوطة بالجافا س عشان الفتح و القفل-->
         <a href="#">Computer & Laptop</a>
         <a href="#">Computer Accessories</a>
        <div class="phone-item">
     <a href="#" class="phone-link">
         <span>SmartPhone</span>
-        <i class="fa-solid fa-angle-right phone-arrow"></i>
+        <i class="fa-solid fa-angle-right phone-arrow"></i><!--سهم لليمين-->
     </a>
     <div class="phone-dropdown">
         <a href="#">iPhone</a>
@@ -293,6 +298,8 @@
         </div>
     </div>
 </section>
+
+<!---------------------بيست ديلز--------------------->
 <section class="best-deals container my-5">
     <div class="deals-header">
         <div class="left">
@@ -517,7 +524,7 @@
 </section>
 
 
- 
+ <!--المنتجات اللي فيها سوايب-->
 <section class="py-4">
     <div class="container">
         <h2 class="text-center fw-bold mb-4">Shop with Categorys</h2>
@@ -528,7 +535,7 @@
                 <i class="fa-solid fa-arrow-left"></i>
             </button>
             <div class="row g-3 justify-content-center">
-                <div class="col-lg-2 col-md-4 col-6">
+                <div class="col-lg-2 col-md-4 col-6"><!--عشان حجم الكارد يتغير ع حسب الشاشة-->
                     <div class="category-card">
                         <img src="ca28168661494544c040fd06143b1849c7e4949c.png" alt="">
                         <p>Computer & Laptop</p>
@@ -573,6 +580,9 @@
         </div>
     </div>
 </section>
+
+
+<!---------------------featured products-------------------------->
 <section class="container my-5">
     <div class="row">
 
@@ -629,7 +639,7 @@
             </h5>     
         </div>
     </div>
-                </div>
+</div>
                 <div class="col-lg-3 col-md-6">
                     <div class="card product-card">
         <img src="4d11c06a3b45a80aa15dd6606ef1562a06207fcc.png" class="card-img-top">
@@ -782,7 +792,7 @@
     </div>
 </section>
 
-
+<!--------------البانارين الكبار اللي جمب بعض--------------------->
 <section class="container my-5">
     <div class="row g-3">
 
@@ -828,7 +838,7 @@
 </section>
 
 
-
+<!-----------------computer accss---------------->
 <section class="computer-accessories py-5">
     <div class="container">
 
@@ -1023,6 +1033,7 @@
                         SHOP NOW →
                     </a>
                 </div>
+
                 <div class="right-banner banner-two mt-3">
                     <small>SUMMER SALES</small>
                     <h2>37% DISCOUNT</h2>
@@ -1038,7 +1049,7 @@
     </div>
 </section>
 
-
+<!---------------الماك بوك اللي خلفيته بصلي -------------->
 <section class="promo-mac-wrap py-5">
     <div class="container">
         <div class="promo-mac-card">
@@ -1071,19 +1082,16 @@
 </section>
 
 
-
+<!--المنتجات الصغيرة اللي تحت-->
 <section class="mini-products-showcase py-5">
     <div class="container">
         <div class="row">
 
             <!-- Column 1 -->
             <div class="col-lg-3 col-md-6">
-
                 <h5 class="mini-section-title">FLASH SALE TODAY</h5>
-
                 <div class="mini-product-box">
                     <img src="a2bcce713855ae2fd192a32dfdf3f83c573dc660.png" class="mini-product-img">
-
                     <div class="mini-product-info">
                         <h6>Bose Sport Earbuds-Wireless Earphones</h6>
                         <span>$1,500</span>
@@ -1188,7 +1196,7 @@
     </div>
 </section>
 
-
+<!---------------news----------------->
 <section class="news-showcase-area py-5">
     <div class="container">
         <h2 class="news-main-title text-center mb-5">
@@ -1290,7 +1298,7 @@
 </section>
 
 
-
+<!----------------newsletter-------------------->
 <section class="newsletter">
     <div class="container text-center">
         <h2>Subscribe to our newsletter</h2>
@@ -1314,6 +1322,7 @@
         </div>
     </div>
 </section> 
+<!------------------الفوترر-------------->
 <footer class="footer">
 <div class="container">
 <div class="row gy-4">
